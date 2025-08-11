@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "nimbbl_mobile_kit_ios_core_api_sdk"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "Nimbbl Core API SDK for iOS"
   spec.description  = "Core API SDK for Nimbbl payment integration on iOS. This SDK provides the core API functionality for payment processing, order management, and transaction handling."
   spec.homepage     = "https://nimbbl.com"
