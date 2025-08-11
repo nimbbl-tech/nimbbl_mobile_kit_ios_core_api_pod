@@ -11,8 +11,6 @@ Pod::Spec.new do |spec|
   
   # Framework distribution - no source code
   spec.vendored_frameworks = "nimbbl_mobile_kit_ios_core_api_sdk.framework"
-  spec.public_header_files = "nimbbl_mobile_kit_ios_core_api_sdk.framework/Headers/*.h"
-  spec.source_files = "nimbbl_mobile_kit_ios_core_api_sdk.framework/Headers/*.h"
   
   spec.swift_version = "5.0"
   spec.framework    = "Foundation"
