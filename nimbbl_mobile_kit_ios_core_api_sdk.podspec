@@ -7,10 +7,13 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "Nimbbl" => "support@nimbbl.com" }
   spec.platform     = :ios, "13.0"
-  spec.source       = { :git => "https://bitbucket.org/nimbbl-tech/nimbbl_mobile_kit_ios_core_api_sdk.git", :tag => "#{spec.version}" }
-  # For local development, uncomment the line below and comment the line above
-  # spec.source = { :path => "." }
-  spec.source_files = "nimbbl_mobile_kit_ios_core_api_sdk/*.swift"
+  spec.source       = { :git => "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_core_api_pod.git", :tag => "#{spec.version}" }
+  
+  # Framework distribution - no source code
+  spec.vendored_frameworks = "nimbbl_mobile_kit_ios_core_api_sdk.framework"
+  spec.public_header_files = "nimbbl_mobile_kit_ios_core_api_sdk.framework/Headers/*.h"
+  spec.source_files = "nimbbl_mobile_kit_ios_core_api_sdk.framework/Headers/*.h"
+  
   spec.swift_version = "5.0"
   spec.framework    = "Foundation"
   spec.framework    = "UIKit"
@@ -20,23 +23,22 @@ Pod::Spec.new do |spec|
   
   # Add code signing configuration
   spec.pod_target_xcconfig = {
-    'CODE_SIGNING_ALLOWED' => 'NO',
-    'CODE_SIGNING_REQUIRED' => 'NO',
-    'CODE_SIGNING_IDENTITY' => '',
-    'EXPANDED_CODE_SIGN_IDENTITY' => '',
-    'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES',
-    'SKIP_INSTALL' => 'NO',
-    'ENABLE_BITCODE' => 'NO',
-    'COPY_PHASE_STRIP' => 'NO',
-    'STRIP_INSTALLED_PRODUCT' => 'NO',
-    'STRIP_STYLE' => 'non-global',
-    'MACH_O_TYPE' => 'staticlib',
-    'DEFINES_MODULE' => 'YES'
+    "CODE_SIGNING_ALLOWED" => "NO",
+    "CODE_SIGNING_REQUIRED" => "NO",
+    "CODE_SIGNING_IDENTITY" => "",
+    "EXPANDED_CODE_SIGN_IDENTITY" => "",
+    "BUILD_LIBRARY_FOR_DISTRIBUTION" => "YES",
+    "SKIP_INSTALL" => "NO",
+    "ENABLE_BITCODE" => "NO",
+    "COPY_PHASE_STRIP" => "NO",
+    "STRIP_INSTALLED_PRODUCT" => "NO",
+    "STRIP_STYLE" => "non-global",
+    "MACH_O_TYPE" => "staticlib",
+    "DEFINES_MODULE" => "YES"
   }
   
   # Add user target xcconfig for additional compatibility
   spec.user_target_xcconfig = {
-    'GENERATE_INFOPLIST_FILE' => 'YES'
+    "GENERATE_INFOPLIST_FILE" => "YES"
   }
 end
-
