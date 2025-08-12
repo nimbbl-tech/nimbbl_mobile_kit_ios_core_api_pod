@@ -28,13 +28,19 @@ Pod::Spec.new do |spec|
     'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'NO',
     'ENABLE_BITCODE' => 'NO',
     'CODE_SIGNING_ALLOWED' => 'NO',
-    'CODE_SIGNING_REQUIRED' => 'NO'
+    'CODE_SIGNING_REQUIRED' => 'NO',
+    'ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES' => 'NO',
+    'EMBEDDED_CONTENT_CONTAINS_SWIFT' => 'NO'
   }
   
-  # User target configuration
+  # User target configuration to prevent embedding
   spec.user_target_xcconfig = {
     'MACH_O_TYPE' => 'staticlib',
     'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'NO',
-    'ENABLE_BITCODE' => 'NO'
+    'ENABLE_BITCODE' => 'NO',
+    'ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES' => 'NO',
+    'EMBEDDED_CONTENT_CONTAINS_SWIFT' => 'NO',
+    'FRAMEWORK_SEARCH_PATHS' => '$(inherited)',
+    'OTHER_LDFLAGS' => '$(inherited) -ObjC'
   }
 end
