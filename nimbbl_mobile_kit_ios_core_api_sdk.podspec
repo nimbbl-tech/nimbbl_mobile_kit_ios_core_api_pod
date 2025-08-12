@@ -14,7 +14,6 @@ Pod::Spec.new do |spec|
   spec.static_framework = true
   
   # Static library and headers
-  spec.vendored_libraries = "static_lib/libnimbbl_mobile_kit_ios_core_api_sdk.a"
   spec.source_files = "static_lib/Headers/*.h"
   spec.public_header_files = "static_lib/Headers/*.h"
 
@@ -30,7 +29,9 @@ Pod::Spec.new do |spec|
     'CODE_SIGNING_ALLOWED' => 'NO',
     'CODE_SIGNING_REQUIRED' => 'NO',
     'ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES' => 'NO',
-    'EMBEDDED_CONTENT_CONTAINS_SWIFT' => 'NO'
+    'EMBEDDED_CONTENT_CONTAINS_SWIFT' => 'NO',
+    'LIBRARY_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/nimbbl_mobile_kit_ios_core_api_sdk/static_lib',
+    'OTHER_LDFLAGS' => '$(inherited) -lnimbbl_mobile_kit_ios_core_api_sdk'
   }
   
   # User target configuration to prevent embedding
@@ -40,7 +41,7 @@ Pod::Spec.new do |spec|
     'ENABLE_BITCODE' => 'NO',
     'ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES' => 'NO',
     'EMBEDDED_CONTENT_CONTAINS_SWIFT' => 'NO',
-    'FRAMEWORK_SEARCH_PATHS' => '$(inherited)',
-    'OTHER_LDFLAGS' => '$(inherited) -ObjC'
+    'LIBRARY_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/nimbbl_mobile_kit_ios_core_api_sdk/static_lib',
+    'OTHER_LDFLAGS' => '$(inherited) -lnimbbl_mobile_kit_ios_core_api_sdk'
   }
 end
