@@ -10,19 +10,19 @@
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		I/7lT0/QtIIY1soy/GdKC7RN1dA=
+		dGeGJDkck8xDM0A0/Sosk3Py5gY=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		yhOiWlTO807OzuncaanqBLHtUnc=
+		en3RO5vNHX+K1d4fHQJWPUXVMfo=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		JMvzKTwFpzPFCsmU2QQKQ/PrYe8=
+		9AOUNDGNAd6yQASAmyBJCj8fd90=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		rTuZDu6hvIzBpcqEF7Rc3ZIHiT4=
+		jDjnM3ZQqHOn0R0+pmpmV0QOehY=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		rTuZDu6hvIzBpcqEF7Rc3ZIHiT4=
+		jDjnM3ZQqHOn0R0+pmpmV0QOehY=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		F9YnEbpjVsX3X+Zo6Ouf9J0jRbU=
+		+wjg1yraFoFie6DUY6wuf7yqHZs=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		JMvzKTwFpzPFCsmU2QQKQ/PrYe8=
+		9AOUNDGNAd6yQASAmyBJCj8fd90=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Jd50VBcgtkUNJscSwp/qBsLAGcA=
+		SCIsvNJV+sL/YOfhxSZ3BNfito4=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,65 +50,45 @@
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Jd50VBcgtkUNJscSwp/qBsLAGcA=
+		SCIsvNJV+sL/YOfhxSZ3BNfito4=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		YEc9L0qhh7Ed/+v1cDKjKl23Zeo=
+		P+nv6wpzTqoE6X3xLaIrzVDNnwk=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			I/7lT0/QtIIY1soy/GdKC7RN1dA=
-			</data>
 			<key>hash2</key>
 			<data>
-			Noz9Y3G2QRRdojLc/1VVlGAw/o1WTaSHaZ7vt9ST3Sg=
+			QzdWMh+F7SwVgYdeZVE+CR0DepbwA8Y65d6yNKmKKWo=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			yhOiWlTO807OzuncaanqBLHtUnc=
-			</data>
 			<key>hash2</key>
 			<data>
-			Ae1kp2Kcx7heoylOHnt2aRZRk/FAMGbsbLFsWOUhvZM=
+			5gBYmlTjFAr+g0uMB/mObVStQQbxB5DbPS+9UvMGNrk=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			JMvzKTwFpzPFCsmU2QQKQ/PrYe8=
-			</data>
 			<key>hash2</key>
 			<data>
-			FJy1B06eZPQt3ujpGs5OJNvkFrCtT4OfhhteqEw1Y4k=
+			6e9grbmblGipc7lvaUCBuqsOMtMuZ8xAwoZkVH8vyCA=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			rTuZDu6hvIzBpcqEF7Rc3ZIHiT4=
-			</data>
 			<key>hash2</key>
 			<data>
-			wFHEeSk6N7RcSy86uJNjof/2SFV4xw3eQp9jnYvfNSQ=
+			YABiPj/+yvSBtWvP+bR6z1i4arplFf/12IhcMrrJJDk=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			91rXDIsnBcMg+kZSIoOeVt3DN6Q=
-			</data>
 			<key>hash2</key>
 			<data>
 			ZebBLWrTOPtOCRkevLzXD1nnofpKtV9EIOtsCuWests=
@@ -116,54 +96,34 @@
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			rTuZDu6hvIzBpcqEF7Rc3ZIHiT4=
-			</data>
 			<key>hash2</key>
 			<data>
-			wFHEeSk6N7RcSy86uJNjof/2SFV4xw3eQp9jnYvfNSQ=
+			YABiPj/+yvSBtWvP+bR6z1i4arplFf/12IhcMrrJJDk=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			F9YnEbpjVsX3X+Zo6Ouf9J0jRbU=
-			</data>
 			<key>hash2</key>
 			<data>
-			qDc0+qC6Xn5c5VjaXLuTuxvrrhNLSxMN2p8if0eeeQ4=
+			GiyCuZch7pQfYmJbZPtIT0oS8EuwZHp4p2PGTMFcKls=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			JMvzKTwFpzPFCsmU2QQKQ/PrYe8=
-			</data>
 			<key>hash2</key>
 			<data>
-			FJy1B06eZPQt3ujpGs5OJNvkFrCtT4OfhhteqEw1Y4k=
+			6e9grbmblGipc7lvaUCBuqsOMtMuZ8xAwoZkVH8vyCA=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Jd50VBcgtkUNJscSwp/qBsLAGcA=
-			</data>
 			<key>hash2</key>
 			<data>
-			nHSSmRecGzbfycffXzX6XmZ4C9q993/JwXfMsJvKYJo=
+			zGeMXpuBfo2OvbCrdB/W0PCnNH8zTTlN3Ud2Nq0/RVg=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			GkDOhfqPuIv9C0Jrfw7JmXQGkqI=
-			</data>
 			<key>hash2</key>
 			<data>
 			T7RF1UJTNsfmoaFOnQPwjMDBHnNPHlwXf5LyIuh9XRQ=
@@ -171,24 +131,16 @@
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Jd50VBcgtkUNJscSwp/qBsLAGcA=
-			</data>
 			<key>hash2</key>
 			<data>
-			nHSSmRecGzbfycffXzX6XmZ4C9q993/JwXfMsJvKYJo=
+			zGeMXpuBfo2OvbCrdB/W0PCnNH8zTTlN3Ud2Nq0/RVg=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			YEc9L0qhh7Ed/+v1cDKjKl23Zeo=
-			</data>
 			<key>hash2</key>
 			<data>
-			Kbc32nd9Pi8fjV6bL7yD2PEsdT4wLrv+/EPaS1qy5gI=
+			0f+1QN/xWq0z1FQyCditvm3VERGQJAy9R/xaAD3/CSc=
 			</data>
 		</dict>
 	</dict>
