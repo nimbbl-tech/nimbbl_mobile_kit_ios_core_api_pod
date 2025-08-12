@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.author       = { "Nimbbl" => "tech@nimbbl.biz" }
   
   spec.platform     = :ios, "13.0"
-  spec.source       = { :git => "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_core_api_sdk.git", :tag => spec.version }
+  spec.source       = { :git => "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_core_api_pod.git", :tag => spec.version }
 
   # Prebuilt binary framework
   spec.vendored_frameworks = "nimbbl_mobile_kit_ios_core_api_sdk.xcframework"
