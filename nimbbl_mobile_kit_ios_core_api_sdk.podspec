@@ -13,14 +13,23 @@ Pod::Spec.new do |spec|
   # Prebuilt binary framework
   spec.vendored_frameworks = "nimbbl_mobile_kit_ios_core_api_sdk.xcframework"
 
-  # Ensures linking doesn’t force dynamic frameworks
-  spec.static_framework = true
-
+  # Configure for automatic integration without embedding issues
+  spec.static_framework = false
+  
   # No source code compilation
   spec.requires_arc = false
 
-  # Compatible architectures
+  # Configure build settings to prevent embedding issues
   spec.pod_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+    'EMBEDDED_CONTENT_CONTAINS_SWIFT' => 'NO',
+    'ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES' => 'NO',
+    'FRAMEWORK_SEARCH_PATHS' => ['$(inherited)', '$(PODS_ROOT)/nimbbl_mobile_kit_ios_core_api_sdk']
+  }
+  
+  # User target configuration to prevent embedding
+  spec.user_target_xcconfig = {
+    'EMBEDDED_CONTENT_CONTAINS_SWIFT' => 'NO',
+    'ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES' => 'NO'
   }
 end
