@@ -13,8 +13,10 @@ Pod::Spec.new do |spec|
   # Use static library to avoid embedding issues
   spec.static_framework = true
   
-  # Prebuilt binary framework
-  spec.vendored_frameworks = "nimbbl_mobile_kit_ios_core_api_sdk.xcframework"
+  # Static library and headers
+  spec.vendored_libraries = "static_lib/libnimbbl_mobile_kit_ios_core_api_sdk.a"
+  spec.source_files = "static_lib/Headers/*.h"
+  spec.public_header_files = "static_lib/Headers/*.h"
 
   # No source code compilation
   spec.requires_arc = false
