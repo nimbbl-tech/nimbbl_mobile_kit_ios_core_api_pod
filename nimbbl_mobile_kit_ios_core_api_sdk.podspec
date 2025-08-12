@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "nimbbl_mobile_kit_ios_core_api_sdk"
-  spec.version      = "1.0.3"
+  spec.version      = "1.0.4"
   spec.summary      = "Nimbbl Core API SDK for iOS"
   spec.description  = "Core API SDK for Nimbbl payment integration on iOS. This SDK provides the core API functionality for payment processing, order management, and transaction handling."
   spec.homepage     = "https://nimbbl.biz"
@@ -15,28 +15,4 @@ Pod::Spec.new do |spec|
   spec.swift_version = "5.0"
   spec.framework    = "Foundation"
   spec.framework    = "UIKit"
-  
-  # Dynamic framework configuration
-  # spec.static_framework = true  # Removed for dynamic framework
-  
-  # Add code signing configuration
-  spec.pod_target_xcconfig = {
-    "CODE_SIGNING_ALLOWED" => "NO",
-    "CODE_SIGNING_REQUIRED" => "NO",
-    "CODE_SIGNING_IDENTITY" => "",
-    "EXPANDED_CODE_SIGN_IDENTITY" => "",
-    "BUILD_LIBRARY_FOR_DISTRIBUTION" => "YES",
-    "SKIP_INSTALL" => "NO",
-    "ENABLE_BITCODE" => "NO",
-    "COPY_PHASE_STRIP" => "NO",
-    "STRIP_INSTALLED_PRODUCT" => "NO",
-    "STRIP_STYLE" => "non-global",
-    "MACH_O_TYPE" => "mh_dylib",
-    "DEFINES_MODULE" => "YES"
-  }
-  
-  # Add user target xcconfig for additional compatibility
-  spec.user_target_xcconfig = {
-    "GENERATE_INFOPLIST_FILE" => "YES"
-  }
 end
