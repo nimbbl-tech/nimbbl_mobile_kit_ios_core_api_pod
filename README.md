@@ -16,7 +16,7 @@ A universal XCFramework for Nimbbl payment integration on iOS.
 Add this line to your Podfile:
 
 ```ruby
-pod 'nimbbl_mobile_kit_ios_core_api_sdk', '~> 1.3.5'
+pod 'nimbbl_mobile_kit_ios_core_api_sdk', '~> 1.3.6'
 ```
 
 Then run:
