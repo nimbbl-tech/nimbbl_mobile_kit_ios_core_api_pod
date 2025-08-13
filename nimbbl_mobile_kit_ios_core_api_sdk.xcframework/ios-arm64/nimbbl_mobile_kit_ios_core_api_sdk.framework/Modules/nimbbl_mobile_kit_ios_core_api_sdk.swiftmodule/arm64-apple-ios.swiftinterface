@@ -12,18 +12,6 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 import os.log
 import os
-@_hasMissingDesignatedInitializers public class NetworkHelper {
-  public static let shared: nimbbl_mobile_kit_ios_core_api_sdk.NetworkHelper
-  public func getApiClient(isAuth: Swift.Bool, token: Swift.String) -> Foundation.URLSessionConfiguration
-  public func makeRequest(url: Swift.String, method: Swift.String = "GET", body: Foundation.Data? = nil, isAuth: Swift.Bool = false, token: Swift.String = "", completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
-  @objc deinit
-}
-public struct UPIAppDetailsResponse : Swift.Codable {
-  public let ios: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]?
-  public let android: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
 public struct EventConstants {
   public static let SDK_INITIALIZED: Swift.String
   public static let SDK_CLEANUP: Swift.String
@@ -44,6 +32,19 @@ public struct EventConstants {
   public static let PAYMENT_STATUS_SUCCESS: Swift.String
   public static let PAYMENT_STATUS_FAILED: Swift.String
 }
+public struct NimbblErrorResponse : Swift.Codable {
+  public let success: Swift.Bool
+  public let message: Swift.String
+  public let errors: [nimbbl_mobile_kit_ios_core_api_sdk.NimbblError]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct NimbblError : Swift.Codable {
+  public let field: Swift.String?
+  public let message: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct APIUtils {
   public static var nimbblTechUrl: Swift.String {
     get
@@ -63,6 +64,115 @@ public struct APIUtils {
   public static func getShopUrl(for baseUrl: Swift.String) -> Swift.String
   public static let ERROR_SWW_DOT_DOT: Swift.String
   public static let RESPONSE_QUERY_PARAM: Swift.String
+}
+public struct TransactionEnquiryResponse : Swift.Codable {
+  public let transactions: [nimbbl_mobile_kit_ios_core_api_sdk.Transaction]?
+  public let order: nimbbl_mobile_kit_ios_core_api_sdk.Order?
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case transactions
+    case order
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Transaction : Swift.Codable {
+  public let nimbblTransactionId: Swift.String?
+  public let transactionType: Swift.String?
+  public let paymentStatus: Swift.String?
+  public let nimbblSignature: Swift.String?
+  public let message: Swift.String?
+  public let paymentPartner: Swift.String?
+  public let pspTransactionId: Swift.String?
+  public let completionTime: Swift.Int?
+  public let transactionAmount: Swift.Double?
+  public let transactionCurrency: Swift.String?
+  public let additionalCharges: Swift.Double?
+  public let offerDiscount: Swift.Double?
+  public let offerId: Swift.String?
+  public let signatureVersion: Swift.String?
+  public let processingPaymentPartner: Swift.String?
+  public let paymentAcquirer: Swift.String?
+  public let paymentArn: Swift.String?
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case nimbblTransactionId
+    case transactionType
+    case paymentStatus
+    case nimbblSignature
+    case message
+    case paymentPartner
+    case pspTransactionId
+    case completionTime
+    case transactionAmount
+    case transactionCurrency
+    case additionalCharges
+    case offerDiscount
+    case offerId
+    case signatureVersion
+    case processingPaymentPartner
+    case paymentAcquirer
+    case paymentArn
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Order : Swift.Codable {
+  public let nimbblOrderId: Swift.String?
+  public let invoiceId: Swift.String?
+  public let status: Swift.String?
+  public let customAttributes: [nimbbl_mobile_kit_ios_core_api_sdk.AnyCodable]?
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case nimbblOrderId
+    case invoiceId
+    case status
+    case customAttributes
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct AnyCodable : Swift.Codable {
+  public let value: Any
+  public init(_ value: Any)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 @_hasMissingDesignatedInitializers public class LogUtil {
   public static func debugLog(tag: Swift.String, message: Swift.String)
@@ -86,24 +196,11 @@ public struct NimbblCheckoutOptions : Swift.Codable {
   public func logEvent(eventName: Swift.String, orderId: Swift.String? = nil, token: Swift.String? = nil, subMerchantId: Swift.String? = nil, additionalData: [Swift.String : Any]? = nil, customUserAgent: Swift.String? = nil, customDeviceInfo: [Swift.String : Swift.String]? = nil, customAppInfo: [Swift.String : Swift.String]? = nil)
   @objc deinit
 }
-public struct APIConstants {
-  public static var BASE_URL: Swift.String
-  public static let WEB_VIEW_RESP_CHECK_URL: Swift.String
-  public static var FINGERPRINT: Swift.String
-  public static var DEVICE_FINGERPRINT: Swift.String
-  public static let checkoutCancelUrl: Swift.String
-  public static let transactionEnquiryUrl: Swift.String
-  public static let updateOrderUrl: Swift.String
-  public static let checkoutDetailUrl: Swift.String
-  public static let upiAppDetailsUrl: Swift.String
-  public static let EVENT_LOG_URL_QA: Swift.String
-  public static let EVENT_LOG_URL_PP: Swift.String
-  public static let EVENT_LOG_URL_PROD: Swift.String
-  public static let TENANT_ID_QA: Swift.String
-  public static let TENANT_ID_PP: Swift.String
-  public static let TENANT_ID_PROD: Swift.String
-  public static func getEventLogUrl() -> Swift.String
-  public static func getDefaultTenantId() -> Swift.String
+public struct UPIAppDetailsResponse : Swift.Codable {
+  public let ios: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]?
+  public let android: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct CheckoutDetailResponse : Swift.Codable {
   public let subMerchantId: Swift.String?
@@ -158,63 +255,28 @@ public struct CheckoutDetailResponse : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct UPIAppsVO : Swift.Codable {
+  public let upiAppName: Swift.String?
+  public let scheme: Swift.String?
+  public let packageName: Swift.String?
+  public let upiAppCode: Swift.String?
+  public let logoUrl: Swift.String?
+  public let appBaseUrl: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO {
+  public func toDictionary() -> [Swift.String : Any]
+}
+public struct UPIAppsResponse : Swift.Codable {
+  public let upiApps: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 @_hasMissingDesignatedInitializers public class EventLoggingUtils {
   public static func safeLogEvent(eventName: Swift.String, orderId: Swift.String? = nil, token: Swift.String? = nil, subMerchantId: Swift.String? = nil, additionalData: [Swift.String : Any]? = nil, sdkVersion: Swift.String)
   public static func safeLogEvent(eventName: Swift.String, orderId: Swift.String? = nil, token: Swift.String? = nil, subMerchantId: Swift.String? = nil, additionalData: [Swift.String : Any]? = nil, customTag: Swift.String, sdkVersion: Swift.String)
   @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NimbblCoreApiSDK : ObjectiveC.NSObject {
-  public static let shared: nimbbl_mobile_kit_ios_core_api_sdk.NimbblCoreApiSDK
-  public func updateCheckOutCancelReason(token: Swift.String, orderId: Swift.String, cancelReason: Swift.String, completion: @escaping (Swift.Result<Foundation.Data, any Swift.Error>) -> Swift.Void)
-  public func updateOrderDetails(token: Swift.String, orderId: Swift.String, callbackMode: Swift.String, referrerPlatform: Swift.String, referrerPlatformVersion: Swift.String, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse, any Swift.Error>) -> Swift.Void)
-  public func getTransactionEnquiry(token: Swift.String, orderId: Swift.String, invoiceId: Swift.String, transactionId: Swift.String, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.TransactionEnquiryResponse, any Swift.Error>) -> Swift.Void)
-  public func getCheckoutDetails(token: Swift.String, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.CheckoutDetailResponse, any Swift.Error>) -> Swift.Void)
-  public func getUPIAppDetails(token: Swift.String, platform: Swift.String = "ios", completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.UPIAppDetailsResponse, any Swift.Error>) -> Swift.Void)
-  public func createOrder(amount: Swift.Double, currency: Swift.String, orderLineItems: [[Swift.String : Any]], user: [Swift.String : Any]? = nil, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse, any Swift.Error>) -> Swift.Void)
-  public func createShopOrder(currency: Swift.String, amount: Swift.String, productId: Swift.String, orderLineItems: Swift.Bool, checkoutExperience: Swift.String, paymentMode: Swift.String, subPaymentMode: Swift.String, user: [Swift.String : Any]?, completion: @escaping (Swift.Result<[Swift.String : Any], any Swift.Error>) -> Swift.Void)
-  public func createShopOrderFlutter(currency: Swift.String, amount: Swift.String, productId: Swift.String, orderLineItems: Swift.Bool, checkoutExperience: Swift.String, paymentMode: Swift.String, subPaymentMode: Swift.String, userEmail: Swift.String, userName: Swift.String, userMobileNumber: Swift.String, completion: @escaping (Swift.Result<[Swift.String : Any], any Swift.Error>) -> Swift.Void)
-  public func logEvent(eventName: Swift.String, orderId: Swift.String? = nil, token: Swift.String? = nil, subMerchantId: Swift.String? = nil, additionalData: [Swift.String : Any]? = nil, customUserAgent: Swift.String? = nil, customDeviceInfo: [Swift.String : Swift.String]? = nil, customAppInfo: [Swift.String : Swift.String]? = nil)
-  @objc deinit
-}
-@objc extension nimbbl_mobile_kit_ios_core_api_sdk.NimbblCoreApiSDK {
-  @objc dynamic public func updateCheckOutCancelReasonObjC(token: Foundation.NSString, orderId: Foundation.NSString, cancelReason: Foundation.NSString, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
-  @objc dynamic public func updateOrderDetailsObjC(token: Foundation.NSString, orderId: Foundation.NSString, callbackMode: Foundation.NSString, referrerPlatform: Foundation.NSString, referrerPlatformVersion: Foundation.NSString, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
-  @objc dynamic public func getTransactionEnquiryObjC(token: Foundation.NSString, orderId: Foundation.NSString, invoiceId: Foundation.NSString, transactionId: Foundation.NSString, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
-  @objc dynamic public func getCheckoutDetailsObjC(token: Foundation.NSString, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
-  @objc dynamic public func createOrderObjC(amount: Foundation.NSNumber, currency: Foundation.NSString, orderLineItems: Foundation.NSArray, user: Foundation.NSDictionary?, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
-  @objc dynamic public func createShopOrderObjC(currency: Foundation.NSString, amount: Foundation.NSString, productId: Foundation.NSString, orderLineItems: Foundation.NSNumber, checkoutExperience: Foundation.NSString, paymentMode: Foundation.NSString, subPaymentMode: Foundation.NSString, user: Foundation.NSDictionary?, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
-  @objc dynamic public func createShopOrderFlutterObjC(currency: Foundation.NSString, amount: Foundation.NSString, productId: Foundation.NSString, orderLineItems: Foundation.NSNumber, checkoutExperience: Foundation.NSString, paymentMode: Foundation.NSString, subPaymentMode: Foundation.NSString, userEmail: Foundation.NSString, userName: Foundation.NSString, userMobileNumber: Foundation.NSString, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
-  @objc dynamic public func getUPIAppDetailsObjC(token: Foundation.NSString, platform: Foundation.NSString, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
-}
-extension nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse {
-  public func toDictionary() -> [Swift.String : Any]
-}
-extension nimbbl_mobile_kit_ios_core_api_sdk.User {
-  public func toDictionary() -> [Swift.String : Any]
-}
-extension nimbbl_mobile_kit_ios_core_api_sdk.OrderLineItem {
-  public func toDictionary() -> [Swift.String : Any]
-}
-extension nimbbl_mobile_kit_ios_core_api_sdk.ShippingAddress {
-  public func toDictionary() -> [Swift.String : Any]
-}
-extension nimbbl_mobile_kit_ios_core_api_sdk.Action {
-  public func toDictionary() -> [Swift.String : Any]
-}
-extension nimbbl_mobile_kit_ios_core_api_sdk.TransactionEnquiryResponse {
-  public func toDictionary() -> [Swift.String : Any]
-}
-extension nimbbl_mobile_kit_ios_core_api_sdk.Transaction {
-  public func toDictionary() -> [Swift.String : Any]
-}
-extension nimbbl_mobile_kit_ios_core_api_sdk.CheckoutDetailResponse {
-  public func toDictionary() -> [Swift.String : Any]
-}
-extension nimbbl_mobile_kit_ios_core_api_sdk.UPIAppDetailsResponse {
-  public func toDictionary() -> [Swift.String : Any]
-}
-extension nimbbl_mobile_kit_ios_core_api_sdk.Order {
-  public func toDictionary() -> [Swift.String : Any]
 }
 public struct OrderResponse : Swift.Codable {
   public let orderDate: Swift.String?
@@ -339,25 +401,85 @@ public struct Action : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct UPIAppsVO : Swift.Codable {
-  public let upiAppName: Swift.String?
-  public let scheme: Swift.String?
-  public let packageName: Swift.String?
-  public let upiAppCode: Swift.String?
-  public let logoUrl: Swift.String?
-  public let appBaseUrl: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NimbblCoreApiSDK : ObjectiveC.NSObject {
+  public static let shared: nimbbl_mobile_kit_ios_core_api_sdk.NimbblCoreApiSDK
+  public func updateCheckOutCancelReason(token: Swift.String, orderId: Swift.String, cancelReason: Swift.String, completion: @escaping (Swift.Result<Foundation.Data, any Swift.Error>) -> Swift.Void)
+  public func updateOrderDetails(token: Swift.String, orderId: Swift.String, callbackMode: Swift.String, referrerPlatform: Swift.String, referrerPlatformVersion: Swift.String, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse, any Swift.Error>) -> Swift.Void)
+  public func getTransactionEnquiry(token: Swift.String, orderId: Swift.String, invoiceId: Swift.String, transactionId: Swift.String, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.TransactionEnquiryResponse, any Swift.Error>) -> Swift.Void)
+  public func getCheckoutDetails(token: Swift.String, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.CheckoutDetailResponse, any Swift.Error>) -> Swift.Void)
+  public func getUPIAppDetails(token: Swift.String, platform: Swift.String = "ios", completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.UPIAppDetailsResponse, any Swift.Error>) -> Swift.Void)
+  public func createOrder(amount: Swift.Double, currency: Swift.String, orderLineItems: [[Swift.String : Any]], user: [Swift.String : Any]? = nil, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse, any Swift.Error>) -> Swift.Void)
+  public func createShopOrder(currency: Swift.String, amount: Swift.String, productId: Swift.String, orderLineItems: Swift.Bool, checkoutExperience: Swift.String, paymentMode: Swift.String, subPaymentMode: Swift.String, user: [Swift.String : Any]?, completion: @escaping (Swift.Result<[Swift.String : Any], any Swift.Error>) -> Swift.Void)
+  public func createShopOrderFlutter(currency: Swift.String, amount: Swift.String, productId: Swift.String, orderLineItems: Swift.Bool, checkoutExperience: Swift.String, paymentMode: Swift.String, subPaymentMode: Swift.String, userEmail: Swift.String, userName: Swift.String, userMobileNumber: Swift.String, completion: @escaping (Swift.Result<[Swift.String : Any], any Swift.Error>) -> Swift.Void)
+  public func logEvent(eventName: Swift.String, orderId: Swift.String? = nil, token: Swift.String? = nil, subMerchantId: Swift.String? = nil, additionalData: [Swift.String : Any]? = nil, customUserAgent: Swift.String? = nil, customDeviceInfo: [Swift.String : Swift.String]? = nil, customAppInfo: [Swift.String : Swift.String]? = nil)
+  @objc deinit
 }
-extension nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO {
+@objc extension nimbbl_mobile_kit_ios_core_api_sdk.NimbblCoreApiSDK {
+  @objc dynamic public func updateCheckOutCancelReasonObjC(token: Foundation.NSString, orderId: Foundation.NSString, cancelReason: Foundation.NSString, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
+  @objc dynamic public func updateOrderDetailsObjC(token: Foundation.NSString, orderId: Foundation.NSString, callbackMode: Foundation.NSString, referrerPlatform: Foundation.NSString, referrerPlatformVersion: Foundation.NSString, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
+  @objc dynamic public func getTransactionEnquiryObjC(token: Foundation.NSString, orderId: Foundation.NSString, invoiceId: Foundation.NSString, transactionId: Foundation.NSString, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
+  @objc dynamic public func getCheckoutDetailsObjC(token: Foundation.NSString, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
+  @objc dynamic public func createOrderObjC(amount: Foundation.NSNumber, currency: Foundation.NSString, orderLineItems: Foundation.NSArray, user: Foundation.NSDictionary?, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
+  @objc dynamic public func createShopOrderObjC(currency: Foundation.NSString, amount: Foundation.NSString, productId: Foundation.NSString, orderLineItems: Foundation.NSNumber, checkoutExperience: Foundation.NSString, paymentMode: Foundation.NSString, subPaymentMode: Foundation.NSString, user: Foundation.NSDictionary?, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
+  @objc dynamic public func createShopOrderFlutterObjC(currency: Foundation.NSString, amount: Foundation.NSString, productId: Foundation.NSString, orderLineItems: Foundation.NSNumber, checkoutExperience: Foundation.NSString, paymentMode: Foundation.NSString, subPaymentMode: Foundation.NSString, userEmail: Foundation.NSString, userName: Foundation.NSString, userMobileNumber: Foundation.NSString, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
+  @objc dynamic public func getUPIAppDetailsObjC(token: Foundation.NSString, platform: Foundation.NSString, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
+}
+extension nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse {
   public func toDictionary() -> [Swift.String : Any]
 }
-public struct UPIAppsResponse : Swift.Codable {
-  public let upiApps: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+extension nimbbl_mobile_kit_ios_core_api_sdk.User {
+  public func toDictionary() -> [Swift.String : Any]
+}
+extension nimbbl_mobile_kit_ios_core_api_sdk.OrderLineItem {
+  public func toDictionary() -> [Swift.String : Any]
+}
+extension nimbbl_mobile_kit_ios_core_api_sdk.ShippingAddress {
+  public func toDictionary() -> [Swift.String : Any]
+}
+extension nimbbl_mobile_kit_ios_core_api_sdk.Action {
+  public func toDictionary() -> [Swift.String : Any]
+}
+extension nimbbl_mobile_kit_ios_core_api_sdk.TransactionEnquiryResponse {
+  public func toDictionary() -> [Swift.String : Any]
+}
+extension nimbbl_mobile_kit_ios_core_api_sdk.Transaction {
+  public func toDictionary() -> [Swift.String : Any]
+}
+extension nimbbl_mobile_kit_ios_core_api_sdk.CheckoutDetailResponse {
+  public func toDictionary() -> [Swift.String : Any]
+}
+extension nimbbl_mobile_kit_ios_core_api_sdk.UPIAppDetailsResponse {
+  public func toDictionary() -> [Swift.String : Any]
+}
+extension nimbbl_mobile_kit_ios_core_api_sdk.Order {
+  public func toDictionary() -> [Swift.String : Any]
+}
+public struct APIConstants {
+  public static var BASE_URL: Swift.String
+  public static let WEB_VIEW_RESP_CHECK_URL: Swift.String
+  public static var FINGERPRINT: Swift.String
+  public static var DEVICE_FINGERPRINT: Swift.String
+  public static let checkoutCancelUrl: Swift.String
+  public static let transactionEnquiryUrl: Swift.String
+  public static let updateOrderUrl: Swift.String
+  public static let checkoutDetailUrl: Swift.String
+  public static let upiAppDetailsUrl: Swift.String
+  public static let EVENT_LOG_URL_QA: Swift.String
+  public static let EVENT_LOG_URL_PP: Swift.String
+  public static let EVENT_LOG_URL_PROD: Swift.String
+  public static let TENANT_ID_QA: Swift.String
+  public static let TENANT_ID_PP: Swift.String
+  public static let TENANT_ID_PROD: Swift.String
+  public static func getEventLogUrl() -> Swift.String
+  public static func getDefaultTenantId() -> Swift.String
 }
 public struct Utils {
+}
+@_hasMissingDesignatedInitializers public class NetworkHelper {
+  public static let shared: nimbbl_mobile_kit_ios_core_api_sdk.NetworkHelper
+  public func getApiClient(isAuth: Swift.Bool, token: Swift.String) -> Foundation.URLSessionConfiguration
+  public func makeRequest(url: Swift.String, method: Swift.String = "GET", body: Foundation.Data? = nil, isAuth: Swift.Bool = false, token: Swift.String = "", completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers public class NimbblUPIAppDetector {
   public static func getUPIAppsFromAPIAndDevice(token: Swift.String, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsResponse, any Swift.Error>) -> Swift.Void)
@@ -366,128 +488,15 @@ public struct Utils {
   public static func isUPIAppReturnURL(_ url: Swift.String) -> Swift.Bool
   @objc deinit
 }
-public struct TransactionEnquiryResponse : Swift.Codable {
-  public let transactions: [nimbbl_mobile_kit_ios_core_api_sdk.Transaction]?
-  public let order: nimbbl_mobile_kit_ios_core_api_sdk.Order?
-  public enum CodingKeys : Swift.String, Swift.CodingKey {
-    case transactions
-    case order
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias RawValue = Swift.String
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct Transaction : Swift.Codable {
-  public let nimbblTransactionId: Swift.String?
-  public let transactionType: Swift.String?
-  public let paymentStatus: Swift.String?
-  public let nimbblSignature: Swift.String?
-  public let message: Swift.String?
-  public let paymentPartner: Swift.String?
-  public let pspTransactionId: Swift.String?
-  public let completionTime: Swift.Int?
-  public let transactionAmount: Swift.Double?
-  public let transactionCurrency: Swift.String?
-  public let additionalCharges: Swift.Double?
-  public let offerDiscount: Swift.Double?
-  public let offerId: Swift.String?
-  public let signatureVersion: Swift.String?
-  public let processingPaymentPartner: Swift.String?
-  public let paymentAcquirer: Swift.String?
-  public let paymentArn: Swift.String?
-  public enum CodingKeys : Swift.String, Swift.CodingKey {
-    case nimbblTransactionId
-    case transactionType
-    case paymentStatus
-    case nimbblSignature
-    case message
-    case paymentPartner
-    case pspTransactionId
-    case completionTime
-    case transactionAmount
-    case transactionCurrency
-    case additionalCharges
-    case offerDiscount
-    case offerId
-    case signatureVersion
-    case processingPaymentPartner
-    case paymentAcquirer
-    case paymentArn
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias RawValue = Swift.String
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct Order : Swift.Codable {
-  public let nimbblOrderId: Swift.String?
-  public let invoiceId: Swift.String?
-  public let status: Swift.String?
-  public let customAttributes: [nimbbl_mobile_kit_ios_core_api_sdk.AnyCodable]?
-  public enum CodingKeys : Swift.String, Swift.CodingKey {
-    case nimbblOrderId
-    case invoiceId
-    case status
-    case customAttributes
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias RawValue = Swift.String
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct AnyCodable : Swift.Codable {
-  public let value: Any
-  public init(_ value: Any)
-  public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-public struct NimbblErrorResponse : Swift.Codable {
-  public let success: Swift.Bool
-  public let message: Swift.String
-  public let errors: [nimbbl_mobile_kit_ios_core_api_sdk.NimbblError]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct NimbblError : Swift.Codable {
-  public let field: Swift.String?
-  public let message: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
+extension nimbbl_mobile_kit_ios_core_api_sdk.TransactionEnquiryResponse.CodingKeys : Swift.Equatable {}
+extension nimbbl_mobile_kit_ios_core_api_sdk.TransactionEnquiryResponse.CodingKeys : Swift.Hashable {}
+extension nimbbl_mobile_kit_ios_core_api_sdk.TransactionEnquiryResponse.CodingKeys : Swift.RawRepresentable {}
+extension nimbbl_mobile_kit_ios_core_api_sdk.Transaction.CodingKeys : Swift.Equatable {}
+extension nimbbl_mobile_kit_ios_core_api_sdk.Transaction.CodingKeys : Swift.Hashable {}
+extension nimbbl_mobile_kit_ios_core_api_sdk.Transaction.CodingKeys : Swift.RawRepresentable {}
+extension nimbbl_mobile_kit_ios_core_api_sdk.Order.CodingKeys : Swift.Equatable {}
+extension nimbbl_mobile_kit_ios_core_api_sdk.Order.CodingKeys : Swift.Hashable {}
+extension nimbbl_mobile_kit_ios_core_api_sdk.Order.CodingKeys : Swift.RawRepresentable {}
 extension nimbbl_mobile_kit_ios_core_api_sdk.CheckoutDetailResponse.CodingKeys : Swift.Equatable {}
 extension nimbbl_mobile_kit_ios_core_api_sdk.CheckoutDetailResponse.CodingKeys : Swift.Hashable {}
 extension nimbbl_mobile_kit_ios_core_api_sdk.CheckoutDetailResponse.CodingKeys : Swift.RawRepresentable {}
@@ -500,12 +509,3 @@ extension nimbbl_mobile_kit_ios_core_api_sdk.User.CodingKeys : Swift.RawRepresen
 extension nimbbl_mobile_kit_ios_core_api_sdk.ShippingAddress.CodingKeys : Swift.Equatable {}
 extension nimbbl_mobile_kit_ios_core_api_sdk.ShippingAddress.CodingKeys : Swift.Hashable {}
 extension nimbbl_mobile_kit_ios_core_api_sdk.ShippingAddress.CodingKeys : Swift.RawRepresentable {}
-extension nimbbl_mobile_kit_ios_core_api_sdk.TransactionEnquiryResponse.CodingKeys : Swift.Equatable {}
-extension nimbbl_mobile_kit_ios_core_api_sdk.TransactionEnquiryResponse.CodingKeys : Swift.Hashable {}
-extension nimbbl_mobile_kit_ios_core_api_sdk.TransactionEnquiryResponse.CodingKeys : Swift.RawRepresentable {}
-extension nimbbl_mobile_kit_ios_core_api_sdk.Transaction.CodingKeys : Swift.Equatable {}
-extension nimbbl_mobile_kit_ios_core_api_sdk.Transaction.CodingKeys : Swift.Hashable {}
-extension nimbbl_mobile_kit_ios_core_api_sdk.Transaction.CodingKeys : Swift.RawRepresentable {}
-extension nimbbl_mobile_kit_ios_core_api_sdk.Order.CodingKeys : Swift.Equatable {}
-extension nimbbl_mobile_kit_ios_core_api_sdk.Order.CodingKeys : Swift.Hashable {}
-extension nimbbl_mobile_kit_ios_core_api_sdk.Order.CodingKeys : Swift.RawRepresentable {}
