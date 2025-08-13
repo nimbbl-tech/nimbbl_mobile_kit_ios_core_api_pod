@@ -7597,56 +7597,6 @@
         "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk"
       },
       {
-        "kind": "Import",
-        "name": "CommonCrypto",
-        "printedName": "CommonCrypto",
-        "declKind": "Import",
-        "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "Utils",
-        "printedName": "Utils",
-        "declKind": "Struct",
-        "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk5UtilsV",
-        "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk5UtilsV",
-        "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk"
-      },
-      {
         "kind": "TypeDecl",
         "name": "NetworkHelper",
         "printedName": "NetworkHelper",
@@ -17099,6 +17049,56 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Utils",
+        "printedName": "Utils",
+        "declKind": "Struct",
+        "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk5UtilsV",
+        "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk5UtilsV",
+        "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },

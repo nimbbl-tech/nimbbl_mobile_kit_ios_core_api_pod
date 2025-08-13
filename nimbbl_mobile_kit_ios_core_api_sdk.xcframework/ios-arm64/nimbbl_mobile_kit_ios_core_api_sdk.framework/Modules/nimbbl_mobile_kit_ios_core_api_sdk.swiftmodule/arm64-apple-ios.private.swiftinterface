@@ -212,8 +212,6 @@ public struct APIConstants {
   public static func getEventLogUrl() -> Swift.String
   public static func getDefaultTenantId() -> Swift.String
 }
-public struct Utils {
-}
 @_hasMissingDesignatedInitializers public class NetworkHelper {
   public static let shared: nimbbl_mobile_kit_ios_core_api_sdk.NetworkHelper
   public func getApiClient(isAuth: Swift.Bool, token: Swift.String) -> Foundation.URLSessionConfiguration
@@ -469,6 +467,8 @@ public struct CheckoutDetailResponse : Swift.Codable {
   }
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+}
+public struct Utils {
 }
 public struct UPIAppsVO : Swift.Codable {
   public let upiAppName: Swift.String?
