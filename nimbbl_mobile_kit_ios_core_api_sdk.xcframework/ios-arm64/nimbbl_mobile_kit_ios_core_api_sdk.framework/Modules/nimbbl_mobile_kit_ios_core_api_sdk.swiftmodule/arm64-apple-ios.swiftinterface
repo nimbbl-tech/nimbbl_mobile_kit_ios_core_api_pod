@@ -12,33 +12,6 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 import os.log
 import os
-public struct UPIAppsVO : Swift.Codable {
-  public let upiAppName: Swift.String?
-  public let scheme: Swift.String?
-  public let packageName: Swift.String?
-  public let upiAppCode: Swift.String?
-  public let logoUrl: Swift.String?
-  public let appBaseUrl: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-extension nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO {
-  public func toDictionary() -> [Swift.String : Any]
-}
-public struct UPIAppsResponse : Swift.Codable {
-  public let upiApps: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct Utils {
-}
-@_hasMissingDesignatedInitializers public class NimbblUPIAppDetector {
-  public static func getUPIAppsFromAPIAndDevice(token: Swift.String, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsResponse, any Swift.Error>) -> Swift.Void)
-  public static func getInstalledUPIApps(token: Swift.String, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsResponse, any Swift.Error>) -> Swift.Void)
-  public static func getUPIAppsList(token: Swift.String, completion: @escaping (Swift.Result<[nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO], any Swift.Error>) -> Swift.Void)
-  public static func isUPIAppReturnURL(_ url: Swift.String) -> Swift.Bool
-  @objc deinit
-}
 public struct TransactionEnquiryResponse : Swift.Codable {
   public let transactions: [nimbbl_mobile_kit_ios_core_api_sdk.Transaction]?
   public let order: nimbbl_mobile_kit_ios_core_api_sdk.Order?
@@ -487,6 +460,33 @@ extension nimbbl_mobile_kit_ios_core_api_sdk.UPIAppDetailsResponse {
 }
 extension nimbbl_mobile_kit_ios_core_api_sdk.Order {
   public func toDictionary() -> [Swift.String : Any]
+}
+public struct UPIAppsVO : Swift.Codable {
+  public let upiAppName: Swift.String?
+  public let scheme: Swift.String?
+  public let packageName: Swift.String?
+  public let upiAppCode: Swift.String?
+  public let logoUrl: Swift.String?
+  public let appBaseUrl: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO {
+  public func toDictionary() -> [Swift.String : Any]
+}
+public struct UPIAppsResponse : Swift.Codable {
+  public let upiApps: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Utils {
+}
+@_hasMissingDesignatedInitializers public class NimbblUPIAppDetector {
+  public static func getUPIAppsFromAPIAndDevice(token: Swift.String, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsResponse, any Swift.Error>) -> Swift.Void)
+  public static func getInstalledUPIApps(token: Swift.String, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsResponse, any Swift.Error>) -> Swift.Void)
+  public static func getUPIAppsList(token: Swift.String, completion: @escaping (Swift.Result<[nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO], any Swift.Error>) -> Swift.Void)
+  public static func isUPIAppReturnURL(_ url: Swift.String) -> Swift.Bool
+  @objc deinit
 }
 extension nimbbl_mobile_kit_ios_core_api_sdk.TransactionEnquiryResponse.CodingKeys : Swift.Equatable {}
 extension nimbbl_mobile_kit_ios_core_api_sdk.TransactionEnquiryResponse.CodingKeys : Swift.Hashable {}
