@@ -12,6 +12,43 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 import os.log
 import os
+public struct APIConstants {
+  public static var BASE_URL: Swift.String
+  public static let WEB_VIEW_RESP_CHECK_URL: Swift.String
+  public static var FINGERPRINT: Swift.String
+  public static var DEVICE_FINGERPRINT: Swift.String
+  public static let checkoutCancelUrl: Swift.String
+  public static let transactionEnquiryUrl: Swift.String
+  public static let updateOrderUrl: Swift.String
+  public static let checkoutDetailUrl: Swift.String
+  public static let upiAppDetailsUrl: Swift.String
+  public static let EVENT_LOG_URL_QA: Swift.String
+  public static let EVENT_LOG_URL_PP: Swift.String
+  public static let EVENT_LOG_URL_PROD: Swift.String
+  public static let TENANT_ID_QA: Swift.String
+  public static let TENANT_ID_PP: Swift.String
+  public static let TENANT_ID_PROD: Swift.String
+  public static func getEventLogUrl() -> Swift.String
+  public static func getDefaultTenantId() -> Swift.String
+}
+public struct UPIAppsVO : Swift.Codable {
+  public let upiAppName: Swift.String?
+  public let scheme: Swift.String?
+  public let packageName: Swift.String?
+  public let upiAppCode: Swift.String?
+  public let logoUrl: Swift.String?
+  public let appBaseUrl: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO {
+  public func toDictionary() -> [Swift.String : Any]
+}
+public struct UPIAppsResponse : Swift.Codable {
+  public let upiApps: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 @_hasMissingDesignatedInitializers public class EventLoggingUtils {
   public static func safeLogEvent(eventName: Swift.String, orderId: Swift.String? = nil, token: Swift.String? = nil, subMerchantId: Swift.String? = nil, additionalData: [Swift.String : Any]? = nil, sdkVersion: Swift.String)
   public static func safeLogEvent(eventName: Swift.String, orderId: Swift.String? = nil, token: Swift.String? = nil, subMerchantId: Swift.String? = nil, additionalData: [Swift.String : Any]? = nil, customTag: Swift.String, sdkVersion: Swift.String)
@@ -192,25 +229,6 @@ extension nimbbl_mobile_kit_ios_core_api_sdk.UPIAppDetailsResponse {
 }
 extension nimbbl_mobile_kit_ios_core_api_sdk.Order {
   public func toDictionary() -> [Swift.String : Any]
-}
-public struct APIConstants {
-  public static var BASE_URL: Swift.String
-  public static let WEB_VIEW_RESP_CHECK_URL: Swift.String
-  public static var FINGERPRINT: Swift.String
-  public static var DEVICE_FINGERPRINT: Swift.String
-  public static let checkoutCancelUrl: Swift.String
-  public static let transactionEnquiryUrl: Swift.String
-  public static let updateOrderUrl: Swift.String
-  public static let checkoutDetailUrl: Swift.String
-  public static let upiAppDetailsUrl: Swift.String
-  public static let EVENT_LOG_URL_QA: Swift.String
-  public static let EVENT_LOG_URL_PP: Swift.String
-  public static let EVENT_LOG_URL_PROD: Swift.String
-  public static let TENANT_ID_QA: Swift.String
-  public static let TENANT_ID_PP: Swift.String
-  public static let TENANT_ID_PROD: Swift.String
-  public static func getEventLogUrl() -> Swift.String
-  public static func getDefaultTenantId() -> Swift.String
 }
 public struct Utils {
 }
@@ -467,24 +485,6 @@ public struct CheckoutDetailResponse : Swift.Codable {
       get
     }
   }
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct UPIAppsVO : Swift.Codable {
-  public let upiAppName: Swift.String?
-  public let scheme: Swift.String?
-  public let packageName: Swift.String?
-  public let upiAppCode: Swift.String?
-  public let logoUrl: Swift.String?
-  public let appBaseUrl: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-extension nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO {
-  public func toDictionary() -> [Swift.String : Any]
-}
-public struct UPIAppsResponse : Swift.Codable {
-  public let upiApps: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
