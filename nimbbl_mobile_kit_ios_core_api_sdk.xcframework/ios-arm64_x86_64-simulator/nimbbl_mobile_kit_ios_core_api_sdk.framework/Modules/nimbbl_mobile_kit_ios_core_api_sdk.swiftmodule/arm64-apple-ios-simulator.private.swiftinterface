@@ -12,6 +12,37 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 import os.log
 import os
+public struct APIConstants {
+  public static var BASE_URL: Swift.String
+  public static let WEB_VIEW_RESP_CHECK_URL: Swift.String
+  public static var FINGERPRINT: Swift.String
+  public static var DEVICE_FINGERPRINT: Swift.String
+  public static let checkoutCancelUrl: Swift.String
+  public static let transactionEnquiryUrl: Swift.String
+  public static let updateOrderUrl: Swift.String
+  public static let checkoutDetailUrl: Swift.String
+  public static let upiAppDetailsUrl: Swift.String
+  public static let EVENT_LOG_URL_QA: Swift.String
+  public static let EVENT_LOG_URL_PP: Swift.String
+  public static let EVENT_LOG_URL_PROD: Swift.String
+  public static let TENANT_ID_QA: Swift.String
+  public static let TENANT_ID_PP: Swift.String
+  public static let TENANT_ID_PROD: Swift.String
+  public static func getEventLogUrl() -> Swift.String
+  public static func getDefaultTenantId() -> Swift.String
+}
+@_hasMissingDesignatedInitializers public class NetworkHelper {
+  public static let shared: nimbbl_mobile_kit_ios_core_api_sdk.NetworkHelper
+  public func getApiClient(isAuth: Swift.Bool, token: Swift.String) -> Foundation.URLSessionConfiguration
+  public func makeRequest(url: Swift.String, method: Swift.String = "GET", body: Foundation.Data? = nil, isAuth: Swift.Bool = false, token: Swift.String = "", completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
+  @objc deinit
+}
+public struct UPIAppDetailsResponse : Swift.Codable {
+  public let ios: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]?
+  public let android: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct EventConstants {
   public static let SDK_INITIALIZED: Swift.String
   public static let SDK_CLEANUP: Swift.String
@@ -454,37 +485,6 @@ public struct NimbblErrorResponse : Swift.Codable {
 public struct NimbblError : Swift.Codable {
   public let field: Swift.String?
   public let message: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct APIConstants {
-  public static var BASE_URL: Swift.String
-  public static let WEB_VIEW_RESP_CHECK_URL: Swift.String
-  public static var FINGERPRINT: Swift.String
-  public static var DEVICE_FINGERPRINT: Swift.String
-  public static let checkoutCancelUrl: Swift.String
-  public static let transactionEnquiryUrl: Swift.String
-  public static let updateOrderUrl: Swift.String
-  public static let checkoutDetailUrl: Swift.String
-  public static let upiAppDetailsUrl: Swift.String
-  public static let EVENT_LOG_URL_QA: Swift.String
-  public static let EVENT_LOG_URL_PP: Swift.String
-  public static let EVENT_LOG_URL_PROD: Swift.String
-  public static let TENANT_ID_QA: Swift.String
-  public static let TENANT_ID_PP: Swift.String
-  public static let TENANT_ID_PROD: Swift.String
-  public static func getEventLogUrl() -> Swift.String
-  public static func getDefaultTenantId() -> Swift.String
-}
-@_hasMissingDesignatedInitializers public class NetworkHelper {
-  public static let shared: nimbbl_mobile_kit_ios_core_api_sdk.NetworkHelper
-  public func getApiClient(isAuth: Swift.Bool, token: Swift.String) -> Foundation.URLSessionConfiguration
-  public func makeRequest(url: Swift.String, method: Swift.String = "GET", body: Foundation.Data? = nil, isAuth: Swift.Bool = false, token: Swift.String = "", completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
-  @objc deinit
-}
-public struct UPIAppDetailsResponse : Swift.Codable {
-  public let ios: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]?
-  public let android: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }

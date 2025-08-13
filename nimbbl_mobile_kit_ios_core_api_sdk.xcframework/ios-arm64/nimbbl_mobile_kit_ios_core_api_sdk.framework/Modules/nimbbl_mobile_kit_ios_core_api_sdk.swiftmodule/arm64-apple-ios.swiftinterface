@@ -12,6 +12,41 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 import os.log
 import os
+public struct Utils {
+}
+@_hasMissingDesignatedInitializers public class NetworkHelper {
+  public static let shared: nimbbl_mobile_kit_ios_core_api_sdk.NetworkHelper
+  public func getApiClient(isAuth: Swift.Bool, token: Swift.String) -> Foundation.URLSessionConfiguration
+  public func makeRequest(url: Swift.String, method: Swift.String = "GET", body: Foundation.Data? = nil, isAuth: Swift.Bool = false, token: Swift.String = "", completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class NimbblUPIAppDetector {
+  public static func getUPIAppsFromAPIAndDevice(token: Swift.String, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsResponse, any Swift.Error>) -> Swift.Void)
+  public static func getInstalledUPIApps(token: Swift.String, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsResponse, any Swift.Error>) -> Swift.Void)
+  public static func getUPIAppsList(token: Swift.String, completion: @escaping (Swift.Result<[nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO], any Swift.Error>) -> Swift.Void)
+  public static func isUPIAppReturnURL(_ url: Swift.String) -> Swift.Bool
+  @objc deinit
+}
+public struct EventConstants {
+  public static let SDK_INITIALIZED: Swift.String
+  public static let SDK_CLEANUP: Swift.String
+  public static let CHECKOUT_INITIATED: Swift.String
+  public static let UPDATE_ORDER_PAYLOAD: Swift.String
+  public static let WEBVIEW_LAUNCH: Swift.String
+  public static let WEBVIEW_LOADED: Swift.String
+  public static let WEBVIEW_FAILED: Swift.String
+  public static let BACK_BUTTON_PRESSED: Swift.String
+  public static let REDIRECT_URL_HIT: Swift.String
+  public static let URL_INTERCEPTED: Swift.String
+  public static let EXCEPTION_THROWN: Swift.String
+  public static let UPI_APPS_LISTED: Swift.String
+  public static let UPI_INTENT_STARTED: Swift.String
+  public static let UPI_INTENT_CLOSED: Swift.String
+  public static let PAYMENT_SUCCESS: Swift.String
+  public static let PAYMENT_FAILED: Swift.String
+  public static let PAYMENT_STATUS_SUCCESS: Swift.String
+  public static let PAYMENT_STATUS_FAILED: Swift.String
+}
 public struct NimbblErrorResponse : Swift.Codable {
   public let success: Swift.Bool
   public let message: Swift.String
@@ -452,41 +487,6 @@ public struct APIConstants {
   public static let TENANT_ID_PROD: Swift.String
   public static func getEventLogUrl() -> Swift.String
   public static func getDefaultTenantId() -> Swift.String
-}
-public struct Utils {
-}
-@_hasMissingDesignatedInitializers public class NetworkHelper {
-  public static let shared: nimbbl_mobile_kit_ios_core_api_sdk.NetworkHelper
-  public func getApiClient(isAuth: Swift.Bool, token: Swift.String) -> Foundation.URLSessionConfiguration
-  public func makeRequest(url: Swift.String, method: Swift.String = "GET", body: Foundation.Data? = nil, isAuth: Swift.Bool = false, token: Swift.String = "", completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class NimbblUPIAppDetector {
-  public static func getUPIAppsFromAPIAndDevice(token: Swift.String, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsResponse, any Swift.Error>) -> Swift.Void)
-  public static func getInstalledUPIApps(token: Swift.String, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsResponse, any Swift.Error>) -> Swift.Void)
-  public static func getUPIAppsList(token: Swift.String, completion: @escaping (Swift.Result<[nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO], any Swift.Error>) -> Swift.Void)
-  public static func isUPIAppReturnURL(_ url: Swift.String) -> Swift.Bool
-  @objc deinit
-}
-public struct EventConstants {
-  public static let SDK_INITIALIZED: Swift.String
-  public static let SDK_CLEANUP: Swift.String
-  public static let CHECKOUT_INITIATED: Swift.String
-  public static let UPDATE_ORDER_PAYLOAD: Swift.String
-  public static let WEBVIEW_LAUNCH: Swift.String
-  public static let WEBVIEW_LOADED: Swift.String
-  public static let WEBVIEW_FAILED: Swift.String
-  public static let BACK_BUTTON_PRESSED: Swift.String
-  public static let REDIRECT_URL_HIT: Swift.String
-  public static let URL_INTERCEPTED: Swift.String
-  public static let EXCEPTION_THROWN: Swift.String
-  public static let UPI_APPS_LISTED: Swift.String
-  public static let UPI_INTENT_STARTED: Swift.String
-  public static let UPI_INTENT_CLOSED: Swift.String
-  public static let PAYMENT_SUCCESS: Swift.String
-  public static let PAYMENT_FAILED: Swift.String
-  public static let PAYMENT_STATUS_SUCCESS: Swift.String
-  public static let PAYMENT_STATUS_FAILED: Swift.String
 }
 extension nimbbl_mobile_kit_ios_core_api_sdk.TransactionEnquiryResponse.CodingKeys : Swift.Equatable {}
 extension nimbbl_mobile_kit_ios_core_api_sdk.TransactionEnquiryResponse.CodingKeys : Swift.Hashable {}
