@@ -12,16 +12,6 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 import os.log
 import os
-@_hasMissingDesignatedInitializers public class EventLoggingUtils {
-  public static func safeLogEvent(eventName: Swift.String, orderId: Swift.String? = nil, token: Swift.String? = nil, subMerchantId: Swift.String? = nil, additionalData: [Swift.String : Any]? = nil, sdkVersion: Swift.String)
-  public static func safeLogEvent(eventName: Swift.String, orderId: Swift.String? = nil, token: Swift.String? = nil, subMerchantId: Swift.String? = nil, additionalData: [Swift.String : Any]? = nil, customTag: Swift.String, sdkVersion: Swift.String)
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class EventLoggingService {
-  public static let shared: nimbbl_mobile_kit_ios_core_api_sdk.EventLoggingService
-  public func logEvent(eventName: Swift.String, orderId: Swift.String? = nil, token: Swift.String? = nil, subMerchantId: Swift.String? = nil, additionalData: [Swift.String : Any]? = nil, customUserAgent: Swift.String? = nil, customDeviceInfo: [Swift.String : Swift.String]? = nil, customAppInfo: [Swift.String : Swift.String]? = nil)
-  @objc deinit
-}
 @_hasMissingDesignatedInitializers public class NimbblUPIAppDetector {
   public static func getUPIAppsFromAPIAndDevice(token: Swift.String, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsResponse, any Swift.Error>) -> Swift.Void)
   public static func getInstalledUPIApps(token: Swift.String, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsResponse, any Swift.Error>) -> Swift.Void)
@@ -486,6 +476,16 @@ public struct Action : Swift.Codable {
   public static func debugLog(_ message: Swift.String)
   public static func errorLog(tag: Swift.String, message: Swift.String, error: (any Swift.Error)? = nil)
   public static func warningLog(tag: Swift.String, message: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class EventLoggingUtils {
+  public static func safeLogEvent(eventName: Swift.String, orderId: Swift.String? = nil, token: Swift.String? = nil, subMerchantId: Swift.String? = nil, additionalData: [Swift.String : Any]? = nil, sdkVersion: Swift.String)
+  public static func safeLogEvent(eventName: Swift.String, orderId: Swift.String? = nil, token: Swift.String? = nil, subMerchantId: Swift.String? = nil, additionalData: [Swift.String : Any]? = nil, customTag: Swift.String, sdkVersion: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class EventLoggingService {
+  public static let shared: nimbbl_mobile_kit_ios_core_api_sdk.EventLoggingService
+  public func logEvent(eventName: Swift.String, orderId: Swift.String? = nil, token: Swift.String? = nil, subMerchantId: Swift.String? = nil, additionalData: [Swift.String : Any]? = nil, customUserAgent: Swift.String? = nil, customDeviceInfo: [Swift.String : Swift.String]? = nil, customAppInfo: [Swift.String : Swift.String]? = nil)
   @objc deinit
 }
 extension nimbbl_mobile_kit_ios_core_api_sdk.CheckoutDetailResponse.CodingKeys : Swift.Equatable {}
