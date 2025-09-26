@@ -6,9 +6,9 @@ Pod::Spec.new do |spec|
   if File.exist?(version_file)
     version_content = File.read(version_file)
     version_match = version_content.match(/^SDK_VERSION=(.+)$/)
-    spec.version = version_match ? version_match[1].strip : "2.0.3.snapshot.226"
+    spec.version = version_match ? version_match[1].strip : "2.0.3.snapshot.999"
   else
-    spec.version = "2.0.3.snapshot.226"
+    spec.version = "2.0.3.snapshot.999"
   end
   spec.summary      = "Nimbbl Core API SDK for iOS"
   spec.description  = "Core API SDK for Nimbbl payment integration on iOS"
