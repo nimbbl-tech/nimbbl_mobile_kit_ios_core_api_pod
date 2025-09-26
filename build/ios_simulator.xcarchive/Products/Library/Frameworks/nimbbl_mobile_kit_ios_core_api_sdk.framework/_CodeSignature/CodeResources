@@ -10,11 +10,7 @@
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-<<<<<<< Updated upstream
-		jWQKkhpAHbdlA4cRZaouMdooSgE=
-=======
-		sGClJlpUM1jFnwRsVJPWLS0TLKA=
->>>>>>> Stashed changes
+		CUaZLNvQr6Td/SP3/soBXrxX9IE=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,19 +26,11 @@
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-<<<<<<< Updated upstream
-		OomnPF2mesql/lBkhRyuoSYWOJQ=
+		+DuD+a60auxMIXzMvYq5y/FSYes=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		jWQKkhpAHbdlA4cRZaouMdooSgE=
-=======
-		n/5Pc0UQnU+1OFG0He4fmNm9ycg=
-		</data>
-		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
-		<data>
-		sGClJlpUM1jFnwRsVJPWLS0TLKA=
->>>>>>> Stashed changes
+		CUaZLNvQr6Td/SP3/soBXrxX9IE=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -58,11 +46,7 @@
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-<<<<<<< Updated upstream
-		6wkxFkv0gMJQtM/NGhZ4uct1nPU=
-=======
-		Q+jQGRYlCfU1nm8ZEXTxUG8X2Kw=
->>>>>>> Stashed changes
+		Lelf6ukbgAYLeMgyNB99Vaz/qx4=
 		</data>
 		<key>SDKVersion.swift.backup.20250926_133447</key>
 		<data>
@@ -72,13 +56,13 @@
 		<data>
 		JW3/KdTh8GwoHH1HzR2/NtgMkkQ=
 		</data>
-<<<<<<< Updated upstream
-		<key>SDKVersion.swift.backup.20250926_151550</key>
-=======
 		<key>SDKVersion.swift.backup.20250926_151934</key>
->>>>>>> Stashed changes
 		<data>
 		0cSdMFAO8gebDArOzuKtZSwxmN4=
+		</data>
+		<key>SDKVersion.swift.backup.20250926_153231</key>
+		<data>
+		qEFDiU4zN1LnLHs4pZln07OFWJY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -87,11 +71,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< Updated upstream
-			0GmiKXyQV/ygSirIMOE+a9vMDY4dr0TXREP3leThdpc=
-=======
-			godw5SC3LoTwec1q6sy8yb4xA6UHDQH59nqwxbsXfr4=
->>>>>>> Stashed changes
+			Ob1JlAc8G4Phqq+AFgz2/R2LGIKz5Dgl5OOybkQI5+Y=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -119,22 +99,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< Updated upstream
-			y+DiA8DXIk1Ezo+czbNQeWXp+/QZSeGalPtUUG+XJGo=
-=======
-			odclPtGF4PDaQkMObVnH/2UWoiRDk5DrKs+fqxOJnaU=
->>>>>>> Stashed changes
+			Vtaeheen2o+TaJcz/+HR618pmMIXXWKHeHtevvPKMAU=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< Updated upstream
-			0GmiKXyQV/ygSirIMOE+a9vMDY4dr0TXREP3leThdpc=
-=======
-			godw5SC3LoTwec1q6sy8yb4xA6UHDQH59nqwxbsXfr4=
->>>>>>> Stashed changes
+			Ob1JlAc8G4Phqq+AFgz2/R2LGIKz5Dgl5OOybkQI5+Y=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -162,11 +134,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< Updated upstream
-			p0BuRQaXc09b/zdx7GOWaqoBEtxsW7mZOz6tKaxqh1g=
-=======
-			N/7xSaj5r0sgl7tim53DUXECc49QhzXXbM6cai2jzV4=
->>>>>>> Stashed changes
+			fVUR6UP9W06uREXQ/LztXtSjIZl5v80ll5yAWjqmLKY=
 			</data>
 		</dict>
 		<key>SDKVersion.swift.backup.20250926_133447</key>
@@ -183,15 +151,18 @@
 			8GASiwaOSpYgOkc22B2XCatUq2mUZnstToT5gWYhmfs=
 			</data>
 		</dict>
-<<<<<<< Updated upstream
-		<key>SDKVersion.swift.backup.20250926_151550</key>
-=======
 		<key>SDKVersion.swift.backup.20250926_151934</key>
->>>>>>> Stashed changes
 		<dict>
 			<key>hash2</key>
 			<data>
 			vKG9U46zdBwOnR/bSopSkZ4ljoMqmwdgP9+5Oq3mb+o=
+			</data>
+		</dict>
+		<key>SDKVersion.swift.backup.20250926_153231</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			07V5oiymUA+J/w6fMHEe+tyKx2PQ187/MbG5wVmIjmI=
 			</data>
 		</dict>
 	</dict>

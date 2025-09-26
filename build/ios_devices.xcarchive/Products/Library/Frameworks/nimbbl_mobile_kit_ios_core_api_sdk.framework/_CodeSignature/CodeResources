@@ -10,11 +10,7 @@
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-<<<<<<< Updated upstream
-		jWQKkhpAHbdlA4cRZaouMdooSgE=
-=======
-		sGClJlpUM1jFnwRsVJPWLS0TLKA=
->>>>>>> Stashed changes
+		CUaZLNvQr6Td/SP3/soBXrxX9IE=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -30,11 +26,7 @@
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-<<<<<<< Updated upstream
-		Fhyeb8LGM57a74kxuZdqwYRNqGA=
-=======
-		yxQsblNO7CZ+5m4Fxpp3pzqQN3U=
->>>>>>> Stashed changes
+		YeTp5q+bc6cqmu3Ic655SZzvlNs=
 		</data>
 		<key>SDKVersion.swift.backup.20250926_133447</key>
 		<data>
@@ -44,13 +36,13 @@
 		<data>
 		JW3/KdTh8GwoHH1HzR2/NtgMkkQ=
 		</data>
-<<<<<<< Updated upstream
-		<key>SDKVersion.swift.backup.20250926_151550</key>
-=======
 		<key>SDKVersion.swift.backup.20250926_151934</key>
->>>>>>> Stashed changes
 		<data>
 		0cSdMFAO8gebDArOzuKtZSwxmN4=
+		</data>
+		<key>SDKVersion.swift.backup.20250926_153231</key>
+		<data>
+		qEFDiU4zN1LnLHs4pZln07OFWJY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -59,11 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< Updated upstream
-			0GmiKXyQV/ygSirIMOE+a9vMDY4dr0TXREP3leThdpc=
-=======
-			godw5SC3LoTwec1q6sy8yb4xA6UHDQH59nqwxbsXfr4=
->>>>>>> Stashed changes
+			Ob1JlAc8G4Phqq+AFgz2/R2LGIKz5Dgl5OOybkQI5+Y=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_core_api_sdk.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -91,11 +79,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-<<<<<<< Updated upstream
-			6G+fCoeT4XKePEhFRKX/4HzI8qfJXJF8NP5BvY7HWck=
-=======
-			0NPqaQFi3is/CdT2zSVTbBXdwsOWWniq1yTnWP7n4XU=
->>>>>>> Stashed changes
+			y+PsfeQfEHdvWBc48V2cdwa0Vn5thb/D4U2DUrwNvhc=
 			</data>
 		</dict>
 		<key>SDKVersion.swift.backup.20250926_133447</key>
@@ -112,15 +96,18 @@
 			8GASiwaOSpYgOkc22B2XCatUq2mUZnstToT5gWYhmfs=
 			</data>
 		</dict>
-<<<<<<< Updated upstream
-		<key>SDKVersion.swift.backup.20250926_151550</key>
-=======
 		<key>SDKVersion.swift.backup.20250926_151934</key>
->>>>>>> Stashed changes
 		<dict>
 			<key>hash2</key>
 			<data>
 			vKG9U46zdBwOnR/bSopSkZ4ljoMqmwdgP9+5Oq3mb+o=
+			</data>
+		</dict>
+		<key>SDKVersion.swift.backup.20250926_153231</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			07V5oiymUA+J/w6fMHEe+tyKx2PQ187/MbG5wVmIjmI=
 			</data>
 		</dict>
 	</dict>
