@@ -1,0 +1,44 @@
+# Nimbbl Core API SDK Version Configuration
+# This file centralizes all version information for semantic versioning
+
+# Current SDK Version (MAJOR.MINOR.PATCH)
+# MAJOR: Breaking changes that require code changes
+# MINOR: New features that are backward compatible
+# PATCH: Bug fixes that are backward compatible
+SDK_VERSION=2.0.3-SNAPSHOT-20250926131439
+
+# Version Metadata
+VERSION_NAME=2.0.3-SNAPSHOT-20250926131439
+VERSION_CODE=20003
+
+# Build Information
+BUILD_DATE=2025-09-26
+BUILD_TYPE=snapshot
+
+# Semantic Versioning Components
+MAJOR_VERSION=2
+MINOR_VERSION=0
+PATCH_VERSION=3
+
+# Pre-release and Build Metadata (optional)
+# PRE_RELEASE=dev
+# BUILD_METADATA=build.123
+
+# Compatibility Information
+MIN_IOS_VERSION=13.0
+TARGET_IOS_VERSION=17.0
+SWIFT_VERSION=5.0
+
+# Dependencies
+# No external dependencies for Core API SDK
+
+# Release Notes Template
+# v2.0.0 - 2025-09-24 - MAJOR RELEASE
+# - MAJOR: Synchronized version with WebView SDK
+# - MAJOR: Enhanced error handling and standardization
+# - MAJOR: Improved API response parsing and validation
+# - MAJOR: Comprehensive event logging and analytics
+# - MAJOR: Optimized UPI app detection and integration
+# - MAJOR: Enhanced network request handling and retry logic
+# - MAJOR: Updated documentation and integration guides
+# - MAJOR: Improved security and data masking
