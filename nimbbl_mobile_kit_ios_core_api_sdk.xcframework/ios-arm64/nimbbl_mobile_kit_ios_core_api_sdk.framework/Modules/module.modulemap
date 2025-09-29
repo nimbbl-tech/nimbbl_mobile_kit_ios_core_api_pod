@@ -1,4 +1,0 @@
-framework module nimbbl_mobile_kit_ios_core_api_sdk {
-  export *
-  module * { export * }
-}
