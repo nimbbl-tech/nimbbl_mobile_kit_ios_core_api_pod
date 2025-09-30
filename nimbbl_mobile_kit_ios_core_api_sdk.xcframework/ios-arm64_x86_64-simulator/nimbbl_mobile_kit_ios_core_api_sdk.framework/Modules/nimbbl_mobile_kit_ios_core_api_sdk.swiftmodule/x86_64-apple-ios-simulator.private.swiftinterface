@@ -174,8 +174,7 @@ public enum LogLevel : Swift.String, Swift.CaseIterable {
   }
 }
 @_hasMissingDesignatedInitializers public class LogUtil {
-  public static func setMinimumLogLevel(_ level: nimbbl_mobile_kit_ios_core_api_sdk.LogLevel)
-  public static func setLoggingEnabled(_ enabled: Swift.Bool)
+  public static var isDebugEnabled: Swift.Bool
   public static func configureForProduction()
   public static func configureForDevelopment()
   public static func getCurrentConfiguration() -> (level: nimbbl_mobile_kit_ios_core_api_sdk.LogLevel, enabled: Swift.Bool, isDebug: Swift.Bool)

@@ -5397,44 +5397,10 @@
         "printedName": "LogUtil",
         "children": [
           {
-            "kind": "Function",
-            "name": "setMinimumLogLevel",
-            "printedName": "setMinimumLogLevel(_:)",
+            "kind": "Var",
+            "name": "isDebugEnabled",
+            "printedName": "isDebugEnabled",
             "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "LogLevel",
-                "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LogLevel",
-                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk8LogLevelO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk7LogUtilC010setMinimumH5LevelyyAA0hL0OFZ",
-            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk7LogUtilC010setMinimumH5LevelyyAA0hL0OFZ",
-            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setLoggingEnabled",
-            "printedName": "setLoggingEnabled(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
               {
                 "kind": "TypeNominal",
                 "name": "Bool",
@@ -5442,17 +5408,94 @@
                 "usr": "s:Sb"
               }
             ],
-            "declKind": "Func",
-            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk7LogUtilC17setLoggingEnabledyySbFZ",
-            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk7LogUtilC17setLoggingEnabledyySbFZ",
+            "declKind": "Var",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk7LogUtilC14isDebugEnabledSbvpZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk7LogUtilC14isDebugEnabledSbvpZ",
             "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
             "static": true,
             "declAttributes": [
+              "HasInitialValue",
               "Final",
+              "HasStorage",
               "AccessControl",
               "RawDocComment"
             ],
-            "funcSelfKind": "NonMutating"
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk7LogUtilC14isDebugEnabledSbvgZ",
+                "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk7LogUtilC14isDebugEnabledSbvgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk7LogUtilC14isDebugEnabledSbvsZ",
+                "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk7LogUtilC14isDebugEnabledSbvsZ",
+                "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk7LogUtilC14isDebugEnabledSbvMZ",
+                "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk7LogUtilC14isDebugEnabledSbvMZ",
+                "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
           },
           {
             "kind": "Function",
@@ -19941,27 +19984,27 @@
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/APIConstants.swift",
       "kind": "StringLiteral",
       "offset": 1079,
-      "length": 43,
-      "value": "\"https:\/\/eventlogpipepp.nimbbl.tech\/v1\/log\""
+      "length": 41,
+      "value": "\"https:\/\/eventlogpipe.nimbbl.tech\/v1\/log\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/APIConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1278,
+      "offset": 1189,
       "length": 38,
       "value": "\"99df59c6-7553-49ab-b884-6a7a8dc3953b\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/APIConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1354,
+      "offset": 1265,
       "length": 38,
       "value": "\"5fd6a596-a39f-4cb2-9a4b-ed72713e537e\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/APIConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1432,
+      "offset": 1343,
       "length": 38,
       "value": "\"6e7e900c-9ce6-4271-b1ec-08875a9129d1\""
     },
@@ -20360,21 +20403,28 @@
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/LogUtil.swift",
       "kind": "BooleanLiteral",
-      "offset": 978,
+      "offset": 1035,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/LogUtil.swift",
       "kind": "BooleanLiteral",
-      "offset": 1151,
+      "offset": 1404,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/LogUtil.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1577,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/LogUtil.swift",
       "kind": "StringLiteral",
-      "offset": 4076,
+      "offset": 4408,
       "length": 14,
       "value": "\"HH:mm:ss.SSS\""
     },
@@ -20641,97 +20691,97 @@
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
       "offset": 544,
-      "length": 31,
-      "value": "\"2.0.3-SNAPSHOT-20250929110307\""
+      "length": 7,
+      "value": "\"2.0.4\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 674,
-      "length": 31,
-      "value": "\"2.0.3-SNAPSHOT-20250929110307\""
+      "offset": 650,
+      "length": 7,
+      "value": "\"2.0.4\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/SDKVersion.swift",
       "kind": "IntegerLiteral",
-      "offset": 793,
+      "offset": 745,
       "length": 5,
       "value": "20003"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 857,
+      "offset": 809,
       "length": 12,
       "value": "\"2025-09-24\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 928,
+      "offset": 880,
       "length": 9,
       "value": "\"release\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/SDKVersion.swift",
       "kind": "IntegerLiteral",
-      "offset": 1060,
+      "offset": 1012,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/SDKVersion.swift",
       "kind": "IntegerLiteral",
-      "offset": 1133,
+      "offset": 1085,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/SDKVersion.swift",
       "kind": "IntegerLiteral",
-      "offset": 1206,
+      "offset": 1158,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1334,
+      "offset": 1286,
       "length": 6,
       "value": "\"13.0\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1414,
+      "offset": 1366,
       "length": 6,
       "value": "\"17.0\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1485,
+      "offset": 1437,
       "length": 5,
       "value": "\"5.0\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1581,
+      "offset": 1533,
       "length": 21,
       "value": "\"Nimbbl Core API SDK\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1671,
+      "offset": 1623,
       "length": 52,
       "value": "\"Core API SDK for Nimbbl payment integration on iOS\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1783,
+      "offset": 1735,
       "length": 5,
       "value": "\"iOS\""
     },

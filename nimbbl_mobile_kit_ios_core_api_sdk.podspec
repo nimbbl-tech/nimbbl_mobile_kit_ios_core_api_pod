@@ -19,8 +19,8 @@ Pod::Spec.new do |spec|
   spec.swift_version = "5.0"
   spec.source       = { :git => "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_core_api_pod.git", :tag => "#{spec.version}" }
   
-  # For production with vendored framework
-  spec.vendored_frameworks = "nimbbl_mobile_kit_ios_core_api_sdk.xcframework"
+  # For production release with xcframework
+  spec.vendored_frameworks = "nimbbl_mobile_kit_ios_core_api_pod/nimbbl_mobile_kit_ios_core_api_sdk.xcframework"
   
   spec.frameworks = ["Foundation", "UIKit"]
   spec.static_framework = true
