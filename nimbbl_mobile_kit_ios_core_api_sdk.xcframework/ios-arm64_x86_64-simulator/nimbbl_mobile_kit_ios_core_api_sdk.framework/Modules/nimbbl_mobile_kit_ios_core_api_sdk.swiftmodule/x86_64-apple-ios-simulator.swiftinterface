@@ -122,7 +122,6 @@ public struct CheckoutDetailResponse : Swift.Codable {
 }
 public struct EventConstants {
   public static let SDK_INITIALIZED: Swift.String
-  public static let SDK_CLEANUP: Swift.String
   public static let CHECKOUT_INITIATED: Swift.String
   public static let UPDATE_ORDER_PAYLOAD: Swift.String
   public static let WEBVIEW_LAUNCH: Swift.String
@@ -135,13 +134,13 @@ public struct EventConstants {
   public static let UPI_APPS_LISTED: Swift.String
   public static let UPI_INTENT_STARTED: Swift.String
   public static let UPI_INTENT_CLOSED: Swift.String
-  public static let PAYMENT_SUCCESS: Swift.String
-  public static let PAYMENT_FAILED: Swift.String
-  public static let PAYMENT_STATUS_SUCCESS: Swift.String
-  public static let PAYMENT_STATUS_FAILED: Swift.String
+  public static let PAYMENT_STATUS: Swift.String
 }
 @_hasMissingDesignatedInitializers public class EventLoggingService {
   public static let shared: nimbbl_mobile_kit_ios_core_api_sdk.EventLoggingService
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func setAppCode(_ code: Swift.String?)
+  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   public func logEvent(eventName: Swift.String, orderId: Swift.String? = nil, token: Swift.String? = nil, subMerchantId: Swift.String? = nil, additionalData: [Swift.String : Any]? = nil, customUserAgent: Swift.String? = nil, customDeviceInfo: [Swift.String : Swift.String]? = nil, customAppInfo: [Swift.String : Swift.String]? = nil)
   #endif
@@ -185,6 +184,11 @@ public enum LogLevel : Swift.String, Swift.CaseIterable {
   #if compiler(>=5.3) && $NonescapableTypes
   public static func errorLog(tag: Swift.String, message: Swift.String, error: (any Swift.Error)? = nil)
   #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func debugLogEvent(tag: Swift.String, eventName: Swift.String, orderId: Swift.String? = nil, subMerchantId: Swift.String? = nil, token: Swift.String? = nil, additionalData: [Swift.String : Any]? = nil, sdkVersion: Swift.String? = nil)
+  #endif
+  public static func debugLogServerRequest(tag: Swift.String, url: Swift.String, requestBody: Swift.String)
+  public static func debugLogServerResponse(tag: Swift.String, responseCode: Swift.Int, responseMessage: Swift.String, responseHeaders: [Swift.String : Swift.String], responseBody: Swift.String)
   @objc deinit
 }
 public struct NetworkConstants {
