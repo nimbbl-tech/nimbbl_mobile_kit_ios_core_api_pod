@@ -17,13 +17,13 @@ Pod::Spec.new do |spec|
   spec.author       = { "Nimbbl" => "support@nimbbl.com" }
   spec.platform     = :ios, "13.0"
   spec.swift_version = "5.0"
-  # For production release
-  spec.source       = { :git => "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_core_api_pod.git", :tag => "#{spec.version}" }
-  spec.vendored_frameworks = "nimbbl_mobile_kit_ios_core_api_sdk.xcframework"
-  
   # For local development (uncomment for local development)
-  # spec.source       = { :path => "." }
-  # spec.source_files = "nimbbl_mobile_kit_ios_core_api_sdk/*.swift"
+  spec.source       = { :path => "." }
+  spec.source_files = "nimbbl_mobile_kit_ios_core_api_sdk/*.swift"
+  
+  # For production release (uncomment for production)
+  # spec.source       = { :git => "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_core_api_pod.git", :tag => "#{spec.version}" }
+  # spec.vendored_frameworks = "nimbbl_mobile_kit_ios_core_api_sdk.xcframework"
   
   spec.frameworks = ["Foundation", "UIKit"]
   spec.static_framework = true
