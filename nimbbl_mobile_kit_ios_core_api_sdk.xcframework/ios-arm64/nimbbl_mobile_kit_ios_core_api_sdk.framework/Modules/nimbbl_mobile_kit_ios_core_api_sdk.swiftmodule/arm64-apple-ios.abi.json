@@ -931,6 +931,486 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ApiLoggingUtils",
+        "printedName": "ApiLoggingUtils",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "logRequest",
+            "printedName": "logRequest(_:customTag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk15ApiLoggingUtilsC10logRequest_9customTagy10Foundation10URLRequestV_SSSgtFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk15ApiLoggingUtilsC10logRequest_9customTagy10Foundation10URLRequestV_SSSgtFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "logResponse",
+            "printedName": "logResponse(_:data:error:customTag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URLResponse?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URLResponse",
+                    "printedName": "Foundation.URLResponse",
+                    "usr": "c:objc(cs)NSURLResponse"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk15ApiLoggingUtilsC11logResponse_4data5error9customTagySo13NSURLResponseCSg_10Foundation4DataVSgs5Error_pSgSSSgtFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk15ApiLoggingUtilsC11logResponse_4data5error9customTagySo13NSURLResponseCSg_10Foundation4DataVSgs5Error_pSgSSSgtFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "logRequestDetails",
+            "printedName": "logRequestDetails(method:url:headers:body:customTag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk15ApiLoggingUtilsC17logRequestDetails6method3url7headers4body9customTagySS_SSSDyS2SGSgSSSgALtFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk15ApiLoggingUtilsC17logRequestDetails6method3url7headers4body9customTagySS_SSSDyS2SGSgSSSgALtFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "logResponseDetails",
+            "printedName": "logResponseDetails(code:message:headers:body:customTag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk15ApiLoggingUtilsC18logResponseDetails4code7message7headers4body9customTagySi_SSSgSDyS2SGSgA2JtFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk15ApiLoggingUtilsC18logResponseDetails4code7message7headers4body9customTagySi_SSSgSDyS2SGSgA2JtFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "logSimpleApiCall",
+            "printedName": "logSimpleApiCall(method:url:responseCode:customTag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk15ApiLoggingUtilsC09logSimpleH4Call6method3url12responseCode9customTagySS_SSSiSSSgtFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk15ApiLoggingUtilsC09logSimpleH4Call6method3url12responseCode9customTagySS_SSSiSSSgtFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "logNetworkError",
+            "printedName": "logNetworkError(_:url:customTag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk15ApiLoggingUtilsC15logNetworkError_3url9customTagys0M0_p_SSSgAHtFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk15ApiLoggingUtilsC15logNetworkError_3url9customTagys0M0_p_SSSgAHtFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk15ApiLoggingUtilsC",
+        "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk15ApiLoggingUtilsC",
+        "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk"
       },
       {
@@ -4821,6 +5301,1014 @@
         "declKind": "Class",
         "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk17EventLoggingUtilsC",
         "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk17EventLoggingUtilsC",
+        "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LoggingConfig",
+        "printedName": "LoggingConfig",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "LogLevel",
+            "printedName": "LogLevel",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "verbose",
+                "printedName": "verbose",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel.Type) -> nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                        "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "LogLevel",
+                            "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO7verboseyA2EmF",
+                "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO7verboseyA2EmF",
+                "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk"
+              },
+              {
+                "kind": "Var",
+                "name": "debug",
+                "printedName": "debug",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel.Type) -> nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                        "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "LogLevel",
+                            "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO5debugyA2EmF",
+                "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO5debugyA2EmF",
+                "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk"
+              },
+              {
+                "kind": "Var",
+                "name": "info",
+                "printedName": "info",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel.Type) -> nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                        "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "LogLevel",
+                            "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO4infoyA2EmF",
+                "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO4infoyA2EmF",
+                "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk"
+              },
+              {
+                "kind": "Var",
+                "name": "warning",
+                "printedName": "warning",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel.Type) -> nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                        "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "LogLevel",
+                            "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO7warningyA2EmF",
+                "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO7warningyA2EmF",
+                "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk"
+              },
+              {
+                "kind": "Var",
+                "name": "error",
+                "printedName": "error",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel.Type) -> nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                        "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "LogLevel",
+                            "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO5erroryA2EmF",
+                "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO5erroryA2EmF",
+                "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                        "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO8rawValueAESgSi_tcfc",
+                "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO8rawValueAESgSi_tcfc",
+                "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO8rawValueSivp",
+                "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO8rawValueSivp",
+                "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO8rawValueSivg",
+                    "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO8rawValueSivg",
+                    "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "allCases",
+                "printedName": "allCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LogLevel",
+                        "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                        "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO8allCasesSayAEGvpZ",
+                "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO8allCasesSayAEGvpZ",
+                "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Nonisolated"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "LogLevel",
+                            "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO8allCasesSayAEGvgZ",
+                    "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO8allCasesSayAEGvgZ",
+                    "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+                    "static": true,
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "enumRawTypeName": "Int",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CaseIterable",
+                "printedName": "CaseIterable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "AllCases",
+                    "printedName": "AllCases",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "LogLevel",
+                            "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:s12CaseIterableP",
+                "mangledName": "$ss12CaseIterableP"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "configureForProduction",
+            "printedName": "configureForProduction()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC22configureForProductionyyFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC22configureForProductionyyFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "configureForDevelopment",
+            "printedName": "configureForDevelopment()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC23configureForDevelopmentyyFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC23configureForDevelopmentyyFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setLogLevel",
+            "printedName": "setLogLevel(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC11setLogLevelyyAC0kL0OFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC11setLogLevelyyAC0kL0OFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setLoggingEnabled",
+            "printedName": "setLoggingEnabled(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC03setH7EnabledyySbFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC03setH7EnabledyySbFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "shouldLog",
+            "printedName": "shouldLog(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC9shouldLogySbAC0K5LevelOFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC9shouldLogySbAC0K5LevelOFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getCurrentConfiguration",
+            "printedName": "getCurrentConfiguration()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(level: nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel, enabled: Swift.Bool)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                    "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC23getCurrentConfigurationAC8LogLevelO5level_Sb7enabledtyFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC23getCurrentConfigurationAC8LogLevelO5level_Sb7enabledtyFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "log",
+            "printedName": "log(level:tag:message:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC3log5level3tag7message5erroryAC8LogLevelO_S2Ss5Error_pSgtFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC3log5level3tag7message5erroryAC8LogLevelO_S2Ss5Error_pSgtFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "verbose",
+            "printedName": "verbose(tag:message:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC7verbose3tag7message5errorySS_SSs5Error_pSgtFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC7verbose3tag7message5errorySS_SSs5Error_pSgtFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "debug",
+            "printedName": "debug(tag:message:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC5debug3tag7message5errorySS_SSs5Error_pSgtFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC5debug3tag7message5errorySS_SSs5Error_pSgtFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "info",
+            "printedName": "info(tag:message:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC4info3tag7message5errorySS_SSs5Error_pSgtFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC4info3tag7message5errorySS_SSs5Error_pSgtFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "warning",
+            "printedName": "warning(tag:message:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC7warning3tag7message5errorySS_SSs5Error_pSgtFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC7warning3tag7message5errorySS_SSs5Error_pSgtFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "error",
+            "printedName": "error(tag:message:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC5error3tag7messageADySS_SSs5Error_pSgtFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC5error3tag7messageADySS_SSs5Error_pSgtFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isDebugEnabled",
+            "printedName": "isDebugEnabled()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC14isDebugEnabledSbyFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC14isDebugEnabledSbyFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getCurrentLogLevelString",
+            "printedName": "getCurrentLogLevelString()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC24getCurrentLogLevelStringSSyFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC24getCurrentLogLevelStringSSyFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isLoggingEnabled",
+            "printedName": "isLoggingEnabled(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel",
+                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC8LogLevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC02isH7Enabled3forSbAC8LogLevelO_tFZ",
+            "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC02isH7Enabled3forSbAC8LogLevelO_tFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC",
+        "mangledName": "$s34nimbbl_mobile_kit_ios_core_api_sdk13LoggingConfigC",
         "moduleName": "nimbbl_mobile_kit_ios_core_api_sdk",
         "declAttributes": [
           "AccessControl",
@@ -20071,7 +21559,7 @@
       "kind": "StringLiteral",
       "offset": 1189,
       "length": 38,
-      "value": "\"99df59c6-7553-49ab-b884-6a7a8dc3953b\""
+      "value": "\"5fd6a596-a39f-4cb2-9a4b-ed72713e537e\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/APIConstants.swift",
@@ -20086,6 +21574,34 @@
       "offset": 1343,
       "length": 38,
       "value": "\"6e7e900c-9ce6-4271-b1ec-08875a9129d1\""
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/ApiLoggingUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 384,
+      "length": 17,
+      "value": "\"NimbblApiLogger\""
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/ApiLoggingUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 442,
+      "length": 21,
+      "value": "\"=== API REQUEST ===\""
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/ApiLoggingUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 505,
+      "length": 22,
+      "value": "\"=== API RESPONSE ===\""
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/ApiLoggingUtils.swift",
+      "kind": "StringLiteral",
+      "offset": 563,
+      "length": 27,
+      "value": "\"=========================\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/APIUtils.swift",
@@ -20424,6 +21940,55 @@
       "value": "\"EventLoggingUtils\""
     },
     {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/LoggingConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 396,
+      "length": 15,
+      "value": "\"LoggingConfig\""
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/LoggingConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 538,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/LoggingConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 561,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/LoggingConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 583,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/LoggingConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 608,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/LoggingConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 631,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/LoggingConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1344,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/LogUtil.swift",
       "kind": "StringLiteral",
       "offset": 254,
@@ -20743,14 +22308,14 @@
       "kind": "StringLiteral",
       "offset": 544,
       "length": 16,
-      "value": "\"2.0.15-alpha.3\""
+      "value": "\"2.0.15-alpha.4\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
       "offset": 659,
       "length": 16,
-      "value": "\"2.0.15-alpha.3\""
+      "value": "\"2.0.15-alpha.4\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_core_api_sdk\/nimbbl_mobile_kit_ios_core_api_sdk\/SDKVersion.swift",

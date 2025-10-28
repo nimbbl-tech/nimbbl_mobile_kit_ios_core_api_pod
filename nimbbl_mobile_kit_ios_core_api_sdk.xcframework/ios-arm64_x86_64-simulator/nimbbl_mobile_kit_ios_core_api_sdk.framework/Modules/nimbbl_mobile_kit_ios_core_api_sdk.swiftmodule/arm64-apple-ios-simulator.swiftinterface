@@ -30,6 +30,27 @@ public struct APIConstants {
   public static func getEventLogUrl() -> Swift.String
   public static func getDefaultTenantId() -> Swift.String
 }
+@_hasMissingDesignatedInitializers public class ApiLoggingUtils {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func logRequest(_ request: Foundation.URLRequest, customTag: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func logResponse(_ response: Foundation.URLResponse?, data: Foundation.Data? = nil, error: (any Swift.Error)? = nil, customTag: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func logRequestDetails(method: Swift.String, url: Swift.String, headers: [Swift.String : Swift.String]? = nil, body: Swift.String? = nil, customTag: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func logResponseDetails(code: Swift.Int, message: Swift.String? = nil, headers: [Swift.String : Swift.String]? = nil, body: Swift.String? = nil, customTag: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func logSimpleApiCall(method: Swift.String, url: Swift.String, responseCode: Swift.Int, customTag: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func logNetworkError(_ error: any Swift.Error, url: Swift.String? = nil, customTag: Swift.String? = nil)
+  #endif
+  @objc deinit
+}
 public struct APIUtils {
   public static var nimbblTechUrl: Swift.String {
     get
@@ -153,6 +174,54 @@ public struct EventConstants {
   #if compiler(>=5.3) && $NonescapableTypes
   public static func safeLogEvent(eventName: Swift.String, orderId: Swift.String? = nil, token: Swift.String? = nil, subMerchantId: Swift.String? = nil, additionalData: [Swift.String : Any]? = nil, customTag: Swift.String, sdkVersion: Swift.String)
   #endif
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class LoggingConfig {
+  public enum LogLevel : Swift.Int, Swift.CaseIterable {
+    case verbose
+    case debug
+    case info
+    case warning
+    case error
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.Int)
+    #endif
+    public typealias AllCases = [nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel]
+    public typealias RawValue = Swift.Int
+    nonisolated public static var allCases: [nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel] {
+      get
+    }
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public static func configureForProduction()
+  public static func configureForDevelopment()
+  public static func setLogLevel(_ level: nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel)
+  public static func setLoggingEnabled(_ enabled: Swift.Bool)
+  public static func shouldLog(_ level: nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel) -> Swift.Bool
+  public static func getCurrentConfiguration() -> (level: nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel, enabled: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func log(level: nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel, tag: Swift.String, message: Swift.String, error: (any Swift.Error)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func verbose(tag: Swift.String, message: Swift.String, error: (any Swift.Error)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func debug(tag: Swift.String, message: Swift.String, error: (any Swift.Error)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func info(tag: Swift.String, message: Swift.String, error: (any Swift.Error)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func warning(tag: Swift.String, message: Swift.String, error: (any Swift.Error)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func error(tag: Swift.String, message: Swift.String, error: (any Swift.Error)? = nil)
+  #endif
+  public static func isDebugEnabled() -> Swift.Bool
+  public static func getCurrentLogLevelString() -> Swift.String
+  public static func isLoggingEnabled(for level: nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel) -> Swift.Bool
   @objc deinit
 }
 public enum LogLevel : Swift.String, Swift.CaseIterable {
@@ -663,6 +732,9 @@ public struct Utils {
 extension nimbbl_mobile_kit_ios_core_api_sdk.CheckoutDetailResponse.CodingKeys : Swift.Equatable {}
 extension nimbbl_mobile_kit_ios_core_api_sdk.CheckoutDetailResponse.CodingKeys : Swift.Hashable {}
 extension nimbbl_mobile_kit_ios_core_api_sdk.CheckoutDetailResponse.CodingKeys : Swift.RawRepresentable {}
+extension nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel : Swift.Equatable {}
+extension nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel : Swift.Hashable {}
+extension nimbbl_mobile_kit_ios_core_api_sdk.LoggingConfig.LogLevel : Swift.RawRepresentable {}
 extension nimbbl_mobile_kit_ios_core_api_sdk.LogLevel : Swift.Equatable {}
 extension nimbbl_mobile_kit_ios_core_api_sdk.LogLevel : Swift.Hashable {}
 extension nimbbl_mobile_kit_ios_core_api_sdk.LogLevel : Swift.RawRepresentable {}
