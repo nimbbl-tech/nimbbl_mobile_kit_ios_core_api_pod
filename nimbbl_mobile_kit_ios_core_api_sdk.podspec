@@ -26,6 +26,8 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks = "nimbbl_mobile_kit_ios_core_api_sdk.xcframework"
   
   spec.frameworks = ["Foundation", "UIKit"]
-  spec.static_framework = true
+  # Always use dynamic framework when building from source files (use_frameworks! requires dynamic)
+  # When vendored_frameworks is used (production), static_framework can be set to true if needed
+  spec.static_framework = false  # Dynamic framework required for use_frameworks!
   spec.pod_target_xcconfig = { 'CODE_SIGNING_ALLOWED' => 'NO' }
 end
