@@ -12,9 +12,9 @@ Pod::Spec.new do |spec|
   end
   spec.summary      = "Nimbbl Core API SDK for iOS"
   spec.description  = "Core API SDK for Nimbbl payment integration on iOS"
-  spec.homepage     = "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_core_api_pod"
+  spec.homepage     = "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_core_api_sdk"
   spec.license      = { :type => 'MIT' }
-  spec.author       = { "Nimbbl" => "support@nimbbl.com" }
+  spec.author       = { "Nimbbl" => "support@nimbbl.biz" }
   spec.platform     = :ios, "13.0"
   spec.swift_version = "5.0"
   # For local development (uncomment for local development)

@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
 // swift-module-flags: -target arm64-apple-ios13 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name nimbbl_mobile_kit_ios_core_api_sdk
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
 import Foundation
 import Network
 import Swift
@@ -21,12 +21,17 @@ public struct APIConstants {
   public static let updateOrderUrl: Swift.String
   public static let checkoutDetailUrl: Swift.String
   public static let upiAppDetailsUrl: Swift.String
-  public static let EVENT_LOG_URL_QA: Swift.String
   public static let EVENT_LOG_URL_PP: Swift.String
   public static let EVENT_LOG_URL_PROD: Swift.String
   public static let TENANT_ID_QA: Swift.String
   public static let TENANT_ID_PP: Swift.String
   public static let TENANT_ID_PROD: Swift.String
+  public static var EVENT_LOG_URL: Swift.String {
+    get
+  }
+  public static var DEFAULT_TENANT_ID: Swift.String {
+    get
+  }
   public static func getEventLogUrl() -> Swift.String
   public static func getDefaultTenantId() -> Swift.String
 }
@@ -56,18 +61,12 @@ public struct APIUtils {
     get
     set
   }
-  public static var shopUrl: Swift.String {
-    get
-  }
   public static var webViewViewUrl: Swift.String {
     get
   }
   public static var webViewRespCheckUrl: Swift.String {
     get
   }
-  public static func getShopUrl() -> Swift.String
-  @available(*, deprecated, message: "Use getShopUrl() instead")
-  public static func getShopUrl(for baseUrl: Swift.String) -> Swift.String
   public static let ERROR_SWW_DOT_DOT: Swift.String
   public static let RESPONSE_QUERY_PARAM: Swift.String
 }
@@ -311,15 +310,6 @@ public struct NimbblCheckoutOptions : Swift.Codable {
   public func getUPIAppDetails(token: Swift.String, platform: Swift.String = "ios", completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.UPIAppDetailsResponse, any Swift.Error>) -> Swift.Void)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  public func createOrder(amount: Swift.Double, currency: Swift.String, orderLineItems: [[Swift.String : Any]], user: [Swift.String : Any]? = nil, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse, any Swift.Error>) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func createShopOrder(currency: Swift.String, amount: Swift.String, productId: Swift.String, orderLineItems: Swift.Bool, checkoutExperience: Swift.String, paymentMode: Swift.String, subPaymentMode: Swift.String, user: [Swift.String : Any]?, completion: @escaping (Swift.Result<[Swift.String : Any], any Swift.Error>) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func createShopOrderFlutter(currency: Swift.String, amount: Swift.String, productId: Swift.String, orderLineItems: Swift.Bool, checkoutExperience: Swift.String, paymentMode: Swift.String, subPaymentMode: Swift.String, userEmail: Swift.String, userName: Swift.String, userMobileNumber: Swift.String, completion: @escaping (Swift.Result<[Swift.String : Any], any Swift.Error>) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func logEvent(eventName: Swift.String, orderId: Swift.String? = nil, token: Swift.String? = nil, subMerchantId: Swift.String? = nil, additionalData: [Swift.String : Any]? = nil, customUserAgent: Swift.String? = nil, customDeviceInfo: [Swift.String : Swift.String]? = nil, customAppInfo: [Swift.String : Swift.String]? = nil)
   #endif
   @objc deinit
@@ -336,15 +326,6 @@ public struct NimbblCheckoutOptions : Swift.Codable {
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func getCheckoutDetailsObjC(token: Foundation.NSString, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func createOrderObjC(amount: Foundation.NSNumber, currency: Foundation.NSString, orderLineItems: Foundation.NSArray, user: Foundation.NSDictionary?, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func createShopOrderObjC(currency: Foundation.NSString, amount: Foundation.NSString, productId: Foundation.NSString, orderLineItems: Foundation.NSNumber, checkoutExperience: Foundation.NSString, paymentMode: Foundation.NSString, subPaymentMode: Foundation.NSString, user: Foundation.NSDictionary?, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic public func createShopOrderFlutterObjC(currency: Foundation.NSString, amount: Foundation.NSString, productId: Foundation.NSString, orderLineItems: Foundation.NSNumber, checkoutExperience: Foundation.NSString, paymentMode: Foundation.NSString, subPaymentMode: Foundation.NSString, userEmail: Foundation.NSString, userName: Foundation.NSString, userMobileNumber: Foundation.NSString, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func getUPIAppDetailsObjC(token: Foundation.NSString, platform: Foundation.NSString, completion: @escaping (Foundation.NSDictionary?, Foundation.NSError?) -> Swift.Void)
