@@ -1,60 +1,72 @@
 # Nimbbl Core API SDK for iOS
 
-A universal XCFramework for Nimbbl payment integration on iOS.
+A prebuilt XCFramework providing the core layer (order management, API calls,
+UPI detection, event logging) for the Nimbbl iOS SDKs. Distributed via
+**Swift Package Manager** and **CocoaPods**.
+
+> Most integrators do **not** add this directly — it is pulled in automatically
+> as a dependency of the [WebView SDK](https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_webview_pod).
+> Add it on its own only if you are building a custom checkout on the Core API.
 
 ## Features
 
-- **Universal XCFramework**: Supports both device (arm64) and simulator (arm64 + x86_64) architectures
-- **iOS 13.0+**: Compatible with iOS 13.0 and later
-- **Swift 5.0**: Built with Swift 5.0
-- **Static Framework**: No external dependencies
+- **Binary XCFramework**: device (arm64) + simulator (arm64 + x86_64)
+- **iOS 15.0+**
+- **Swift 5.0+**, built against the iOS 27 SDK
+- No external dependencies
 
 ## Installation
 
-### CocoaPods
+### Swift Package Manager
 
-Add this line to your Podfile:
+```
+https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_core_api_pod.git
+```
+
+Or in `Package.swift`:
+
+```swift
+dependencies: [
+    .package(
+        url: "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_core_api_pod.git",
+        exact: "2.1.0-alpha.1"
+    )
+]
+```
+
+### CocoaPods (legacy — 2.0.x only)
+
+> **2.1.0 and later are distributed via Swift Package Manager only.** CocoaPods
+> continues to serve existing **2.0.x** releases. CocoaPods Trunk goes read-only
+> on **2 Dec 2026**.
 
 ```ruby
-pod 'nimbbl_mobile_kit_ios_core_api_sdk', '~> 1.4.9'
+pod 'nimbbl_mobile_kit_ios_core_api_sdk', '~> 2.0.17'
 ```
-
-Then run:
-
-```bash
-pod install
-```
-
-### Manual Installation
-
-1. Download the `nimbbl_mobile_kit_ios_core_api_sdk.xcframework`
-2. Drag and drop it into your Xcode project
-3. Make sure "Embed & Sign" is selected in the framework settings
 
 ## Usage
 
 ```swift
 import nimbbl_mobile_kit_ios_core_api_sdk
 
-// Initialize the SDK
-let sdk = NimbblCoreApiSDK.shared
-
-// Create checkout options
-let options = NimbblCheckoutOptions()
-options.orderToken = "your_order_token"
-options.amount = 100.0
-options.currency = "INR"
+let options = NimbblCheckoutOptions(
+    orderToken: "your_order_token",
+    paymentModeCode: nil,
+    bankCode: nil,
+    walletCode: nil,
+    paymentFlow: nil
+)
 ```
 
 ## Requirements
 
-- iOS 13.0+
-- Xcode 12.0+
+- iOS 15.0+
+- Xcode 15.0+ (built against the iOS 27 SDK)
 - Swift 5.0+
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Licensed under the MIT License — see [LICENSE](LICENSE).
 
 ## Support
 

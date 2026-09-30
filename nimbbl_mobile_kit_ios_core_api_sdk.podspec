@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_core_api_sdk"
   spec.license      = { :type => 'MIT' }
   spec.author       = { "Nimbbl" => "support@nimbbl.biz" }
-  spec.platform     = :ios, "13.0"
+  spec.platform     = :ios, "15.0"
   spec.swift_version = "5.0"
   # For local development (uncomment for local development)
   # spec.source       = { :path => "." }
