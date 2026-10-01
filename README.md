@@ -70,4 +70,4 @@ Licensed under the MIT License — see [LICENSE](LICENSE).
 
 ## Support
 
-For support, email support@nimbbl.biz
+For support, email help@nimbbl.biz
